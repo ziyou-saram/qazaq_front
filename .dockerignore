@@ -1,0 +1,15 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+.turbo
+.DS_Store
+*.pem
+*.key
+apps/*/node_modules
+apps/*/.next
+apps/*/out
+packages/*/node_modules
