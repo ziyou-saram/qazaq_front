@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///Users/alikhanzhumabayev/Downloads/qazaq_full_project/frontend/apps/cms/src/app/cms/editor/write/page.tsx"],"sourcesContent":["export default function WritePage() {\n    return (\n        <div>\n            Страница написания контента\n        </div>\n    );\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;kBAAI;;;;;;AAIb"}}]
+}

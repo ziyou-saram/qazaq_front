@@ -1,0 +1,50 @@
+{
+  "node": {
+    "006be408f301c3b0a72fcb75c3d6af7213e8a6f67b": {
+      "workers": {
+        "app/cms/chief-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/chief-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/review.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/cms/chief-editor/[id]/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "apps/cms/src/actions/auth.ts"
+    },
+    "406e5b94ef0258a7e6be257f3f7ee23b73a4a302b5": {
+      "workers": {
+        "app/cms/chief-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/chief-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/review.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "approveContent",
+          "filename": "apps/cms/src/actions/review.ts"
+        }
+      },
+      "layer": {
+        "app/cms/chief-editor/[id]/page": "rsc"
+      },
+      "exportedName": "approveContent",
+      "filename": "apps/cms/src/actions/review.ts"
+    },
+    "60db9213b5d956fb9dd5577893933af69ead36aa22": {
+      "workers": {
+        "app/cms/chief-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/chief-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/review.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "requestRevision",
+          "filename": "apps/cms/src/actions/review.ts"
+        }
+      },
+      "layer": {
+        "app/cms/chief-editor/[id]/page": "rsc"
+      },
+      "exportedName": "requestRevision",
+      "filename": "apps/cms/src/actions/review.ts"
+    }
+  },
+  "edge": {}
+}

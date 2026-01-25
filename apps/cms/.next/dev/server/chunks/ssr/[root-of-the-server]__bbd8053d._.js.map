@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///Users/alikhanzhumabayev/Downloads/qazaq_full_project/frontend/apps/cms/src/app/cms/chief-editor/page.tsx"],"sourcesContent":["export default function ChiefEditorPage() {\n    return (\n        <div>\n            <h1>Chief Editor</h1>\n        </div>\n    );\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;kBACG,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGhB"}}]
+}

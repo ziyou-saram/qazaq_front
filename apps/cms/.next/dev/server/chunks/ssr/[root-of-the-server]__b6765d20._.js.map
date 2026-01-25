@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/alikhanzhumabayev/Downloads/qazaq_full_project/frontend/apps/cms/src/app/login/page.tsx"],"sourcesContent":["export default function LoginPage() {\n    return (\n        <div></div>\n    );\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,6PAAC;;;;;AAET"}}]
+}

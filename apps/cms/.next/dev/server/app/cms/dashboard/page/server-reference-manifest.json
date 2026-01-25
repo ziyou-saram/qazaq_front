@@ -1,0 +1,20 @@
+{
+  "node": {
+    "006be408f301c3b0a72fcb75c3d6af7213e8a6f67b": {
+      "workers": {
+        "app/cms/dashboard/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/cms/dashboard/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "apps/cms/src/actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

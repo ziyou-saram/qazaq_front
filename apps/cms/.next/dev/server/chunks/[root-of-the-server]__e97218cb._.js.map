@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":["file:///Users/alikhanzhumabayev/Downloads/qazaq_full_project/frontend/apps/cms/src/app/api/auth/logout/route.ts"],"sourcesContent":["import { cookies } from \"next/headers\";\nimport { redirect } from \"next/navigation\";\nimport { NextRequest } from \"next/server\";\n\nexport async function GET(request: NextRequest) {\n    const cookieStore = await cookies();\n    cookieStore.delete(\"access_token\");\n    cookieStore.delete(\"refresh_token\");\n\n    redirect(\"/login\");\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;AAAA;;;AAGO,eAAe,IAAI,OAAoB;IAC1C,MAAM,cAAc,MAAM,IAAA,4IAAO;IACjC,YAAY,MAAM,CAAC;IACnB,YAAY,MAAM,CAAC;IAEnB,IAAA,mMAAQ,EAAC;AACb"}}]
+}

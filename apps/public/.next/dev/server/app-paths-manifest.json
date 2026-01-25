@@ -1,0 +1,6 @@
+{
+  "/(main)/articles/page": "app/(main)/articles/page.js",
+  "/(main)/content/[slug]/page": "app/(main)/content/[slug]/page.js",
+  "/(main)/news/page": "app/(main)/news/page.js",
+  "/(main)/page": "app/(main)/page.js"
+}
