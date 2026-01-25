@@ -1,6 +1,10 @@
 import type { APIError, UserResponse } from "./types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+
+if (!API_URL) {
+    console.warn("NEXT_PUBLIC_API_URL is not set");
+}
 
 class APIClient {
     private baseURL: string;

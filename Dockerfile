@@ -12,8 +12,10 @@ WORKDIR /repo
 COPY --from=deps /repo /repo
 
 ARG APP
+ARG NEXT_PUBLIC_API_URL
 # Convert APP arg to env var for turbo if needed, though arguments are passed to run command
 ENV APP=${APP}
+ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
 
 # Build specific workspace
 RUN npm run build --workspace=apps/${APP}

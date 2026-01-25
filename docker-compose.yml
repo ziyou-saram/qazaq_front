@@ -7,9 +7,10 @@ services:
       dockerfile: Dockerfile
       args:
         APP: public
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://api.qazaq.kz}
     environment:
       NODE_ENV: production
-      NEXT_PUBLIC_API_URL: "http://46.247.42.91:8000"
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://api.qazaq.kz}
     ports:
       - "3000:3000"
     restart: unless-stopped
@@ -20,9 +21,10 @@ services:
       dockerfile: Dockerfile
       args:
         APP: cms
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://api.qazaq.kz}
     environment:
       NODE_ENV: production
-      NEXT_PUBLIC_API_URL: "http://46.247.42.91:8000"
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://api.qazaq.kz}
     ports:
       - "3001:3000"
     restart: unless-stopped

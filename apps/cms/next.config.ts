@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
       },
       {
+        protocol: "https",
+        hostname: "api.qazaq.kz",
+      },
+      {
         protocol: "http",
         hostname: "localhost",
         port: "8000",
