@@ -9,7 +9,7 @@ import type {
     APIError,
 } from './types';
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.qazaq.kz";
 
 export function resolveMediaUrl(path?: string | null) {
     if (!path) return null;

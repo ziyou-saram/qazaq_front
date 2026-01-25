@@ -1,6 +1,6 @@
 import type { APIError, UserResponse } from "./types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.qazaq.kz";
 
 if (!API_URL) {
     console.warn("NEXT_PUBLIC_API_URL is not set");
