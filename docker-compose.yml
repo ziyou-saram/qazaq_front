@@ -1,31 +1,28 @@
-version: '3'
+version: "3.8"
 
 services:
   public:
-    container_name: qazaq_public
     build:
       context: .
       dockerfile: Dockerfile
       args:
         APP: public
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: "http://46.247.42.91:8000"
     ports:
       - "3000:3000"
-    restart: always
-    environment:
-      - NODE_ENV=production
-      # Add backend URL if needed, e.g.:
-      # - NEXT_PUBLIC_API_URL=https://api.qazaq.kz
+    restart: unless-stopped
 
   cms:
-    container_name: qazaq_cms
     build:
       context: .
       dockerfile: Dockerfile
       args:
         APP: cms
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: "http://46.247.42.91:8000"
     ports:
       - "3001:3000"
-    restart: always
-    environment:
-      - NODE_ENV=production
-      # - NEXT_PUBLIC_API_URL=https://api.qazaq.kz
+    restart: unless-stopped
