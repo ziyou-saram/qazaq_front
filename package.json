@@ -1,0 +1,22 @@
+{
+  "name": "qazaq",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "dev:public": "npm run dev --workspace=apps/public",
+    "dev:cms": "npm run dev --workspace=apps/cms"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "turbo": "^2.7.5"
+  }
+}
