@@ -64,11 +64,11 @@ export default function Header() {
     };
 
     return (
-        <header className="w-full bg-background">
+        <header className="w-full bg-background border-b border-primary/40 pb-2">
             <div className="flex items-center-safe justify-between py-4">
                 <Image src={"/logo.png"} alt="Logo" width={120} height={120} className="object-contain" />
 
-                <nav className="hidden lg:flex gap-6">
+                <nav className="hidden lg:flex gap-6 ml-auto pr-10">
                     <Link href={"/"} className="text-muted-foreground hover:text-primary transition-colors duration-200">Главная</Link>
                     <Link href={"/news"} className="text-muted-foreground hover:text-primary transition-colors duration-200">Новости</Link>
                     <Link href={"/articles"} className="text-muted-foreground hover:text-primary transition-colors duration-200">Статьи</Link>

@@ -30,6 +30,8 @@ export default function Home() {
 
   return (
     <>
+      <Hero />
+
       <div className="grid gap-4 md:grid-cols-[3.5fr_1fr]">
         {featuredLoading ? (
           <ContentSkeleton />
@@ -248,4 +250,14 @@ function ArticleCard({
       </Link>
     </Item>
   );
+}
+
+const Hero = () => {
+  return (
+    <section>
+      <div className="grid gap-4 md:gap-6">
+        <h1 className="lg:text-9xl md:text-7xl text-5xl font-semibold">Code<br /><span className="text-primary">&</span><span className="text-muted-foreground">Culture</span></h1>
+      </div>
+    </section>
+  )
 }

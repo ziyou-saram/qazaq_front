@@ -422,7 +422,7 @@ __turbopack_context__.s([
     "resolveMediaUrl",
     ()=>resolveMediaUrl
 ]);
-const API_URL = ("TURBOPACK compile-time value", "http://127.0.0.1:8000") || 'http://127.0.0.1:8000';
+const API_URL = ("TURBOPACK compile-time value", "https://api.qazaq.kz") || "https://api.qazaq.kz";
 function resolveMediaUrl(path) {
     if (!path) return null;
     if (path.startsWith('http://') || path.startsWith('https://')) return path;
