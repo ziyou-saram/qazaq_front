@@ -1,5 +1,4 @@
-"use client";
-
+import { useRef, useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
@@ -14,8 +13,12 @@ import {
     Heading1,
     Heading2,
     Quote,
-    Link as LinkIcon
+    Link as LinkIcon,
+    Image as ImageIcon
 } from "lucide-react";
+import { api, resolveMediaUrl } from "@/lib/api";
+import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
 
 interface RichTextEditorProps {
     value: string;
@@ -24,6 +27,9 @@ interface RichTextEditorProps {
 }
 
 export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorProps) {
+    const fileInputRef = useRef<HTMLInputElement>(null);
+    const [isUploading, setIsUploading] = useState(false);
+
     const editor = useEditor({
         extensions: [
             StarterKit,
@@ -38,7 +44,7 @@ export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorP
         content: value,
         editorProps: {
             attributes: {
-                class: "min-h-[300px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 prose prose-neutral dark:prose-invert max-w-none [&_p]:mb-4 [&_p]:leading-relaxed",
+                class: "min-h-[300px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 prose prose-neutral dark:prose-invert max-w-none [&_p]:mb-4 [&_p]:leading-relaxed [&_img]:rounded-md [&_img]:max-w-full",
             },
         },
         onUpdate: ({ editor }) => {
@@ -47,12 +53,42 @@ export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorP
         immediatelyRender: false,
     });
 
+    const handleImageUpload = async (file: File) => {
+        setIsUploading(true);
+        try {
+            const response = await api.media.upload(file);
+            const url = resolveMediaUrl(response.url);
+
+            if (url && editor) {
+                editor.chain().focus().setImage({ src: url }).run();
+            }
+        } catch (error) {
+            toast.error("Ошибка загрузки изображения");
+            console.error(error);
+        } finally {
+            setIsUploading(false);
+            if (fileInputRef.current) {
+                fileInputRef.current.value = "";
+            }
+        }
+    };
+
     if (!editor) {
         return null;
     }
 
     return (
         <div className="flex flex-col gap-2 rounded-md border shadow-sm">
+            <input
+                type="file"
+                className="hidden"
+                ref={fileInputRef}
+                accept="image/*"
+                onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file) handleImageUpload(file);
+                }}
+            />
             <div className="flex flex-wrap items-center gap-1 border-b bg-muted/50 p-1">
                 <Toggle
                     size="sm"
@@ -109,18 +145,11 @@ export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorP
                         const previousUrl = editor.getAttributes('link').href
                         const url = window.prompt('URL', previousUrl)
 
-                        // cancelled
-                        if (url === null) {
-                            return
-                        }
-
-                        // empty
+                        if (url === null) return
                         if (url === '') {
                             editor.chain().focus().extendMarkRange('link').unsetLink().run()
                             return
                         }
-
-                        // update
                         editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run()
                     }}
                     aria-label="Toggle link"
@@ -134,6 +163,22 @@ export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorP
                     aria-label="Toggle blockquote"
                 >
                     <Quote className="h-4 w-4" />
+                </Toggle>
+
+                <div className="w-px h-6 bg-border mx-1" />
+
+                <Toggle
+                    size="sm"
+                    pressed={false}
+                    onPressedChange={() => fileInputRef.current?.click()}
+                    aria-label="Insert image"
+                    disabled={isUploading}
+                >
+                    {isUploading ? (
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                        <ImageIcon className="h-4 w-4" />
+                    )}
                 </Toggle>
             </div>
             <EditorContent editor={editor} />
