@@ -537,24 +537,19 @@ function Home() {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Hero, {}, void 0, false, {
-                fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                lineNumber: 33,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid gap-4 md:grid-cols-[3.5fr_1fr]",
                 children: [
                     featuredLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ContentSkeleton"], {}, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 37,
+                        lineNumber: 35,
                         columnNumber: 11
                     }, this) : featured && featured[0] ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FeaturedContent, {
                         content: featured[0],
                         categoryName: getCategoryName(featured[0].category_id)
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 39,
+                        lineNumber: 37,
                         columnNumber: 11
                     }, this) : null,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -563,25 +558,25 @@ function Home() {
                             length: 3
                         }).map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ContentSkeleton"], {}, i, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 44,
+                                lineNumber: 42,
                                 columnNumber: 55
                             }, this)) : featured?.slice(1, 4).map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FeaturedContentSmall, {
                                 content: item,
                                 categoryName: getCategoryName(item.category_id)
                             }, item.id, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 46,
+                                lineNumber: 44,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 42,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                lineNumber: 35,
+                lineNumber: 33,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -595,7 +590,7 @@ function Home() {
                                 children: "Последние новости"
                             }, void 0, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 57,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -606,18 +601,18 @@ function Home() {
                                     children: "Смотреть все"
                                 }, void 0, false, {
                                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 59,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 60,
+                                lineNumber: 58,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 56,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -626,25 +621,25 @@ function Home() {
                             length: 6
                         }).map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NewsCardSkeleton"], {}, i, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 66,
+                                lineNumber: 64,
                                 columnNumber: 55
                             }, this)) : newsData?.items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NewsCard, {
                                 content: item,
                                 categoryName: getCategoryName(item.category_id)
                             }, item.id, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 68,
+                                lineNumber: 66,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 64,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                lineNumber: 55,
+                lineNumber: 53,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -658,7 +653,7 @@ function Home() {
                                 children: "Свежие статьи"
                             }, void 0, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 79,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -669,18 +664,18 @@ function Home() {
                                     children: "Смотреть все"
                                 }, void 0, false, {
                                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 82,
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 78,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -689,25 +684,25 @@ function Home() {
                             length: 3
                         }).map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ArticleCardSkeleton"], {}, i, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 88,
+                                lineNumber: 86,
                                 columnNumber: 55
                             }, this)) : articlesData?.items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ArticleCard, {
                                 content: item,
                                 categoryName: getCategoryName(item.category_id)
                             }, item.id, false, {
                                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                                lineNumber: 90,
+                                lineNumber: 88,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 86,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                lineNumber: 77,
+                lineNumber: 75,
                 columnNumber: 7
             }, this)
         ]
@@ -730,12 +725,12 @@ function FeaturedContent({ content, categoryName }) {
                         className: "aspect-3/4 md:aspect-video w-full rounded-sm object-cover"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 117,
+                        lineNumber: 115,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 116,
+                    lineNumber: 114,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
@@ -745,7 +740,7 @@ function FeaturedContent({ content, categoryName }) {
                             children: content.title
                         }, void 0, false, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 126,
+                            lineNumber: 124,
                             columnNumber: 11
                         }, this),
                         content.excerpt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemDescription"], {
@@ -753,13 +748,13 @@ function FeaturedContent({ content, categoryName }) {
                             children: content.excerpt
                         }, void 0, false, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 130,
+                            lineNumber: 128,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 125,
+                    lineNumber: 123,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -769,18 +764,18 @@ function FeaturedContent({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 135,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 115,
+            lineNumber: 113,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 114,
+        lineNumber: 112,
         columnNumber: 5
     }, this);
 }
@@ -801,12 +796,12 @@ function FeaturedContentSmall({ content, categoryName }) {
                         className: "aspect-square w-full rounded-sm object-cover"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 159,
+                        lineNumber: 157,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 158,
+                    lineNumber: 156,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
@@ -815,12 +810,12 @@ function FeaturedContentSmall({ content, categoryName }) {
                         children: content.title
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 168,
+                        lineNumber: 166,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 167,
+                    lineNumber: 165,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -830,18 +825,18 @@ function FeaturedContentSmall({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 172,
+                    lineNumber: 170,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 157,
+            lineNumber: 155,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 156,
+        lineNumber: 154,
         columnNumber: 5
     }, this);
 }
@@ -863,12 +858,12 @@ function NewsCard({ content, categoryName }) {
                         className: "aspect-square w-full rounded-sm object-cover size-48 lg:size-56"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 196,
+                        lineNumber: 194,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 195,
+                    lineNumber: 193,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
@@ -878,7 +873,7 @@ function NewsCard({ content, categoryName }) {
                             children: content.title
                         }, void 0, false, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 205,
+                            lineNumber: 203,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -888,24 +883,24 @@ function NewsCard({ content, categoryName }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 208,
+                            lineNumber: 206,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 204,
+                    lineNumber: 202,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 194,
+            lineNumber: 192,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 193,
+        lineNumber: 191,
         columnNumber: 5
     }, this);
 }
@@ -926,12 +921,12 @@ function ArticleCard({ content, categoryName }) {
                         className: "aspect-square w-full rounded-sm object-cover"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 233,
+                        lineNumber: 231,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 232,
+                    lineNumber: 230,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
@@ -940,12 +935,12 @@ function ArticleCard({ content, categoryName }) {
                         children: content.title
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 242,
+                        lineNumber: 240,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 241,
+                    lineNumber: 239,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -955,18 +950,18 @@ function ArticleCard({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 246,
+                    lineNumber: 244,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 231,
+            lineNumber: 229,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 230,
+        lineNumber: 228,
         columnNumber: 5
     }, this);
 }
@@ -980,7 +975,7 @@ const Hero = ()=>{
                     "Code",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 259,
+                        lineNumber: 257,
                         columnNumber: 76
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -988,7 +983,7 @@ const Hero = ()=>{
                         children: "&"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 259,
+                        lineNumber: 257,
                         columnNumber: 82
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -996,23 +991,23 @@ const Hero = ()=>{
                         children: "Culture"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 259,
+                        lineNumber: 257,
                         columnNumber: 121
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                lineNumber: 259,
+                lineNumber: 257,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 258,
+            lineNumber: 256,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 257,
+        lineNumber: 255,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

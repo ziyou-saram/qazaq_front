@@ -136,6 +136,8 @@ function Footer() {
 __turbopack_context__.s([
     "default",
     ()=>RootLayout,
+    "dynamic",
+    ()=>dynamic,
     "metadata",
     ()=>metadata
 ]);
@@ -150,6 +152,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$com
 ;
 ;
 ;
+const dynamic = "force-dynamic";
 const metadata = {
     title: "Qazaq News",
     description: "Главные новости и статьи Казахстана"
@@ -168,23 +171,23 @@ function RootLayout({ children }) {
                     children,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$layout$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/apps/public/src/app/layout.tsx",
-                        lineNumber: 41,
+                        lineNumber: 43,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/apps/public/src/app/layout.tsx",
-                lineNumber: 34,
+                lineNumber: 36,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/apps/public/src/app/layout.tsx",
-            lineNumber: 31,
+            lineNumber: 33,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/layout.tsx",
-        lineNumber: 30,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
@@ -2827,6 +2830,10 @@ function getImageProps(imgProps) {
                     "protocol": ("TURBOPACK compile-time value", "http"),
                     "hostname": ("TURBOPACK compile-time value", "127.0.0.1"),
                     "port": ("TURBOPACK compile-time value", "8000")
+                }),
+                ("TURBOPACK compile-time value", {
+                    "protocol": ("TURBOPACK compile-time value", "https"),
+                    "hostname": ("TURBOPACK compile-time value", "qazaq.s3.eu-north-1.amazonaws.com")
                 })
             ]),
             "localPatterns": ("TURBOPACK compile-time value", [

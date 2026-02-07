@@ -22,6 +22,10 @@ const nextConfig: NextConfig = {
         hostname: "127.0.0.1",
         port: "8000",
       },
+      {
+        protocol: "https",
+        hostname: "qazaq.s3.eu-north-1.amazonaws.com",
+      },
     ],
     unoptimized: true,
   },

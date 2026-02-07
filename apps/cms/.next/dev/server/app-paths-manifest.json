@@ -1,4 +1,9 @@
 {
-  "/login/page": "app/login/page.js",
-  "/page": "app/page.js"
+  "/cms/chief-editor/[id]/page": "app/cms/chief-editor/[id]/page.js",
+  "/cms/chief-editor/page": "app/cms/chief-editor/page.js",
+  "/cms/editor/[id]/page": "app/cms/editor/[id]/page.js",
+  "/cms/editor/create/page": "app/cms/editor/create/page.js",
+  "/cms/editor/page": "app/cms/editor/page.js",
+  "/cms/publisher-editor/[id]/page": "app/cms/publisher-editor/[id]/page.js",
+  "/cms/publisher-editor/page": "app/cms/publisher-editor/page.js"
 }

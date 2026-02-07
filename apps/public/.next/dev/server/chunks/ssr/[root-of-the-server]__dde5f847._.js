@@ -612,7 +612,7 @@ __turbopack_context__.s([
     "resolveMediaUrl",
     ()=>resolveMediaUrl
 ]);
-const API_URL = ("TURBOPACK compile-time value", "https://api.qazaq.kz") || "https://api.qazaq.kz";
+const API_URL = ("TURBOPACK compile-time value", "http://localhost:8000") || "https://api.qazaq.kz";
 function resolveMediaUrl(path) {
     if (!path) return null;
     if (path.startsWith('http://') || path.startsWith('https://')) return path;
@@ -629,6 +629,7 @@ class APIClient {
         try {
             const response = await fetch(url, {
                 ...options,
+                cache: 'no-store',
                 headers: {
                     'Content-Type': 'application/json',
                     ...options?.headers

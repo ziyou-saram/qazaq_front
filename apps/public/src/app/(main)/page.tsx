@@ -30,8 +30,6 @@ export default function Home() {
 
   return (
     <>
-      <Hero />
-
       <div className="grid gap-4 md:grid-cols-[3.5fr_1fr]">
         {featuredLoading ? (
           <ContentSkeleton />

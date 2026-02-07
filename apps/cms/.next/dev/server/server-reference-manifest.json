@@ -1,19 +1,195 @@
 {
   "node": {
-    "6091f28dd978936e83408e2eddbaaea6ff8703a1f1": {
+    "0001868b60ad732ee74a99a6168d96c32137d3bbdb": {
       "workers": {
-        "app/login/page": {
-          "moduleId": "[project]/apps/cms/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/cms/chief-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/chief-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/review.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
-          "exportedName": "login",
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        },
+        "app/cms/chief-editor/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/chief-editor/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        },
+        "app/cms/editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/submit-review.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        },
+        "app/cms/editor/create/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/create/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        },
+        "app/cms/editor/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        },
+        "app/cms/publisher-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/publisher-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/publish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/cms/src/actions/auth.ts"
+        },
+        "app/cms/publisher-editor/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/publisher-editor/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
           "filename": "apps/cms/src/actions/auth.ts"
         }
       },
       "layer": {
-        "app/login/page": "action-browser"
+        "app/cms/chief-editor/[id]/page": "action-browser",
+        "app/cms/chief-editor/page": "action-browser",
+        "app/cms/editor/[id]/page": "action-browser",
+        "app/cms/editor/create/page": "action-browser",
+        "app/cms/editor/page": "action-browser",
+        "app/cms/publisher-editor/[id]/page": "action-browser",
+        "app/cms/publisher-editor/page": "action-browser"
       },
       "filename": "apps/cms/src/actions/auth.ts",
-      "exportedName": "login"
+      "exportedName": "logout"
+    },
+    "40a2af5b271e0345bb154285c0d6fc38ca4f2ca7bd": {
+      "workers": {
+        "app/cms/editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/submit-review.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createArticle",
+          "filename": "apps/cms/src/actions/articles.ts"
+        },
+        "app/cms/editor/create/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/create/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createArticle",
+          "filename": "apps/cms/src/actions/articles.ts"
+        }
+      },
+      "layer": {
+        "app/cms/editor/[id]/page": "rsc",
+        "app/cms/editor/create/page": "action-browser"
+      },
+      "filename": "apps/cms/src/actions/articles.ts",
+      "exportedName": "createArticle"
+    },
+    "409c3a349f2dafc517a90181bfa0acbb38d65b8dd4": {
+      "workers": {
+        "app/cms/editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/submit-review.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "uploadMediaAction",
+          "filename": "apps/cms/src/actions/media.ts"
+        },
+        "app/cms/editor/create/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/create/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "uploadMediaAction",
+          "filename": "apps/cms/src/actions/media.ts"
+        }
+      },
+      "layer": {
+        "app/cms/editor/[id]/page": "action-browser",
+        "app/cms/editor/create/page": "action-browser"
+      },
+      "filename": "apps/cms/src/actions/media.ts",
+      "exportedName": "uploadMediaAction"
+    },
+    "60d5d3ab6fd0c463f5c81c2ffa828d42d46a2f1af0": {
+      "workers": {
+        "app/cms/editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/submit-review.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateArticle",
+          "filename": "apps/cms/src/actions/articles.ts"
+        }
+      },
+      "layer": {
+        "app/cms/editor/[id]/page": "rsc"
+      },
+      "filename": "apps/cms/src/actions/articles.ts",
+      "exportedName": "updateArticle"
+    },
+    "4055b738a71a80db6afd4eb3cc2806cd9492271958": {
+      "workers": {
+        "app/cms/editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/articles.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/cms/src/actions/submit-review.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/apps/cms/src/actions/media.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitForReview",
+          "filename": "apps/cms/src/actions/submit-review.ts"
+        }
+      },
+      "layer": {
+        "app/cms/editor/[id]/page": "rsc"
+      },
+      "filename": "apps/cms/src/actions/submit-review.ts",
+      "exportedName": "submitForReview"
+    },
+    "40a0122c026979a85260c1610b4f19487fd3168af5": {
+      "workers": {
+        "app/cms/chief-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/chief-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/review.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "approveContent",
+          "filename": "apps/cms/src/actions/review.ts"
+        }
+      },
+      "layer": {
+        "app/cms/chief-editor/[id]/page": "action-browser"
+      },
+      "filename": "apps/cms/src/actions/review.ts",
+      "exportedName": "approveContent"
+    },
+    "60a825aa08fbd4814877ddec8a80eac303723371f0": {
+      "workers": {
+        "app/cms/chief-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/chief-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/review.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "requestRevision",
+          "filename": "apps/cms/src/actions/review.ts"
+        }
+      },
+      "layer": {
+        "app/cms/chief-editor/[id]/page": "action-browser"
+      },
+      "filename": "apps/cms/src/actions/review.ts",
+      "exportedName": "requestRevision"
+    },
+    "407aaaed40e8d9b4388a261d0bd161fea2e9b9806e": {
+      "workers": {
+        "app/cms/publisher-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/publisher-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/publish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "publishContent",
+          "filename": "apps/cms/src/actions/publish.ts"
+        }
+      },
+      "layer": {
+        "app/cms/publisher-editor/[id]/page": "action-browser"
+      },
+      "filename": "apps/cms/src/actions/publish.ts",
+      "exportedName": "publishContent"
+    },
+    "408cf075b9e703924ec275c65e4830436573601635": {
+      "workers": {
+        "app/cms/publisher-editor/[id]/page": {
+          "moduleId": "[project]/apps/cms/.next-internal/server/app/cms/publisher-editor/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/cms/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/cms/src/actions/publish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "unpublishContent",
+          "filename": "apps/cms/src/actions/publish.ts"
+        }
+      },
+      "layer": {
+        "app/cms/publisher-editor/[id]/page": "action-browser"
+      },
+      "filename": "apps/cms/src/actions/publish.ts",
+      "exportedName": "unpublishContent"
     }
   },
   "edge": {},

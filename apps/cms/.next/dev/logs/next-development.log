@@ -1,3 +1,8 @@
-[00:00:00.882] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.953] Server  LOG     ✓ Ready in 730ms
-[00:00:02.601] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:00.428] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.465] Server  LOG     ✓ Ready in 324ms
+[00:00:01.917] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[00:00:01.917] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:07.533] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/88501700-2ba6-4823-9270-b59869592d6a.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:32.625] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[00:00:36.197] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:41.280] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

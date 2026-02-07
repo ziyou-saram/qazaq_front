@@ -6,6 +6,7 @@ import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
 import Placeholder from "@tiptap/extension-placeholder";
 import { Toggle } from "@/components/ui/toggle";
+import { uploadMediaAction } from "@/actions/media";
 import {
     Bold,
     Italic,
@@ -21,7 +22,7 @@ import {
     AlignRight,
     AlignJustify
 } from "lucide-react";
-import { api, resolveMediaUrl } from "@/lib/api";
+import { resolveMediaUrl } from "@/lib/api";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 
@@ -64,11 +65,21 @@ export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorP
     const handleImageUpload = async (file: File) => {
         setIsUploading(true);
         try {
-            const response = await api.media.upload(file);
-            const url = resolveMediaUrl(response.url);
+            const formData = new FormData();
+            formData.append("file", file);
+
+            const response = await uploadMediaAction(formData);
+
+            if ("error" in response && response.error) {
+                toast.error(response.error as string);
+                return;
+            }
+
+            const url = "url" in response ? resolveMediaUrl(response.url) : null;
 
             if (url && editor) {
                 editor.chain().focus().setImage({ src: url }).run();
+                toast.success("Изображение вставлено");
             }
         } catch (error) {
             toast.error("Ошибка загрузки изображения");
