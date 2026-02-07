@@ -103,7 +103,7 @@ function renderContent(content: string) {
     const isHtml = /<\/?[a-z][\s\S]*>/i.test(content) || content.includes("<p>");
 
     if (isHtml) {
-        return DOMPurify.sanitize(content);
+        return DOMPurify.sanitize(content, { ADD_ATTR: ['style', 'class'] });
     }
 
     return renderMarkdown(content);

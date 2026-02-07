@@ -3,6 +3,7 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
+import TextAlign from "@tiptap/extension-text-align";
 import Placeholder from "@tiptap/extension-placeholder";
 import { Toggle } from "@/components/ui/toggle";
 import {
@@ -14,7 +15,11 @@ import {
     Heading2,
     Quote,
     Link as LinkIcon,
-    Image as ImageIcon
+    Image as ImageIcon,
+    AlignLeft,
+    AlignCenter,
+    AlignRight,
+    AlignJustify
 } from "lucide-react";
 import { api, resolveMediaUrl } from "@/lib/api";
 import { toast } from "sonner";
@@ -36,6 +41,9 @@ export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorP
             Image,
             Link.configure({
                 openOnClick: false,
+            }),
+            TextAlign.configure({
+                types: ['heading', 'paragraph'],
             }),
             Placeholder.configure({
                 placeholder: placeholder || "Напишите что-нибудь...",
@@ -106,6 +114,44 @@ export function RichTextEditor({ value, onChange, placeholder }: RichTextEditorP
                 >
                     <Italic className="h-4 w-4" />
                 </Toggle>
+
+                <div className="w-px h-6 bg-border mx-1" />
+
+                <Toggle
+                    size="sm"
+                    pressed={editor.isActive({ textAlign: 'left' })}
+                    onPressedChange={() => editor.chain().focus().setTextAlign('left').run()}
+                    aria-label="Align left"
+                >
+                    <AlignLeft className="h-4 w-4" />
+                </Toggle>
+                <Toggle
+                    size="sm"
+                    pressed={editor.isActive({ textAlign: 'center' })}
+                    onPressedChange={() => editor.chain().focus().setTextAlign('center').run()}
+                    aria-label="Align center"
+                >
+                    <AlignCenter className="h-4 w-4" />
+                </Toggle>
+                <Toggle
+                    size="sm"
+                    pressed={editor.isActive({ textAlign: 'right' })}
+                    onPressedChange={() => editor.chain().focus().setTextAlign('right').run()}
+                    aria-label="Align right"
+                >
+                    <AlignRight className="h-4 w-4" />
+                </Toggle>
+                <Toggle
+                    size="sm"
+                    pressed={editor.isActive({ textAlign: 'justify' })}
+                    onPressedChange={() => editor.chain().focus().setTextAlign('justify').run()}
+                    aria-label="Align justify"
+                >
+                    <AlignJustify className="h-4 w-4" />
+                </Toggle>
+
+                <div className="w-px h-6 bg-border mx-1" />
+
                 <Toggle
                     size="sm"
                     pressed={editor.isActive("heading", { level: 2 })}
