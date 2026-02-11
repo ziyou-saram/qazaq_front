@@ -239,9 +239,10 @@ export default function ContentSlugPage(props: { params: Promise<{ slug: string 
                                 />
                             )}
                             <div className="text-muted-foreground text-sm flex flex-wrap justify-center gap-2">
-                                <span>
+                                {/* <span>
                                     {content.author.first_name} {content.author.last_name}
-                                </span>
+                                </span> */}
+                                <span>Qazaq.kz</span>
                                 <span>•</span>
                                 <span>{getCategoryName(content.category_id) || "Без категории"}</span>
                                 <span>•</span>
