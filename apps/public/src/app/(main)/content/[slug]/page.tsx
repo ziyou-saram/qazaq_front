@@ -129,8 +129,7 @@ export default function ContentSlugPage(props: { params: Promise<{ slug: string 
     };
 
     const coverImage =
-        resolveMediaUrl(content?.cover_image_url) ||
-        "https://images.unsplash.com/photo-1764377724194-c4b7356a4851";
+        resolveMediaUrl(content?.cover_image_url)
 
     useEffect(() => {
         if (!content) return;
@@ -230,13 +229,15 @@ export default function ContentSlugPage(props: { params: Promise<{ slug: string 
                         </div>
 
                         <div className="grid gap-8">
-                            <Image
-                                src={coverImage}
-                                alt={content.title}
-                                width={1920}
-                                height={1080}
-                                className="w-full rounded-sm object-cover aspect-video"
-                            />
+                            {coverImage && (
+                                <Image
+                                    src={coverImage}
+                                    alt={content.title}
+                                    width={1920}
+                                    height={1080}
+                                    className="w-full rounded-sm object-cover aspect-video"
+                                />
+                            )}
                             <div className="text-muted-foreground text-sm flex flex-wrap justify-center gap-2">
                                 <span>
                                     {content.author.first_name} {content.author.last_name}
@@ -372,21 +373,22 @@ function VerticalItemArticle({
     categoryName: string | null;
 }) {
     const imageUrl =
-        resolveMediaUrl(content.cover_image_url) ||
-        "https://images.unsplash.com/photo-1764377724194-c4b7356a4851";
+        resolveMediaUrl(content.cover_image_url)
 
     return (
         <Item className="h-fit" asChild>
             <Link href={`/content/${content.slug}`}>
-                <ItemHeader>
-                    <Image
-                        src={imageUrl}
-                        alt={content.title}
-                        width={1920}
-                        height={1080}
-                        className="aspect-square w-full rounded-sm object-cover"
-                    />
-                </ItemHeader>
+                {imageUrl && (
+                    <ItemHeader>
+                        <Image
+                            src={imageUrl}
+                            alt={content.title}
+                            width={1920}
+                            height={1080}
+                            className="aspect-square w-full rounded-sm object-cover"
+                        />
+                    </ItemHeader>
+                )}
                 <ItemContent>
                     <ItemTitle className="text-foreground font-medium text-lg md:text-xl lg:text-2xl">
                         {content.title}

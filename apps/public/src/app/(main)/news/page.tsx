@@ -109,21 +109,22 @@ function HeroNewsCard({
     categoryName: string | null;
 }) {
     const imageUrl =
-        resolveMediaUrl(content.cover_image_url) ||
-        "https://images.unsplash.com/photo-1768639527374-5a0071b66fd7";
+        resolveMediaUrl(content.cover_image_url)
 
     return (
         <Item className="h-fit lg:sticky lg:top-0" asChild>
             <Link href={`/content/${content.slug}`}>
-                <ItemHeader>
-                    <Image
-                        src={imageUrl}
-                        alt={content.title}
-                        width={1920}
-                        height={1080}
-                        className="aspect-3/4 md:aspect-video w-full rounded-sm object-cover"
-                    />
-                </ItemHeader>
+                {imageUrl && (
+                    <ItemHeader>
+                        <Image
+                            src={imageUrl}
+                            alt={content.title}
+                            width={1920}
+                            height={1080}
+                            className="aspect-3/4 md:aspect-video w-full rounded-sm object-cover"
+                        />
+                    </ItemHeader>
+                )}
                 <ItemContent>
                     <ItemTitle className="text-foreground font-medium text-3xl md:text-4xl lg:text-5xl">
                         {content.title}
@@ -146,21 +147,22 @@ function SquareNewsCard({
     categoryName: string | null;
 }) {
     const imageUrl =
-        resolveMediaUrl(content.cover_image_url) ||
-        "https://images.unsplash.com/photo-1764377724194-c4b7356a4851";
+        resolveMediaUrl(content.cover_image_url)
 
     return (
         <Item className="h-fit" asChild>
             <Link href={`/content/${content.slug}`}>
-                <ItemHeader>
-                    <Image
-                        src={imageUrl}
-                        alt={content.title}
-                        width={1920}
-                        height={1080}
-                        className="aspect-square w-full rounded-sm object-cover"
-                    />
-                </ItemHeader>
+                {imageUrl && (
+                    <ItemHeader>
+                        <Image
+                            src={imageUrl}
+                            alt={content.title}
+                            width={1920}
+                            height={1080}
+                            className="aspect-square w-full rounded-sm object-cover"
+                        />
+                    </ItemHeader>
+                )}
                 <ItemContent>
                     <ItemTitle className="text-foreground font-medium text-lg md:text-xl lg:text-2xl">
                         {content.title}
