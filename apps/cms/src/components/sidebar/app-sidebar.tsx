@@ -27,10 +27,10 @@ import {
     FileEdit,
     CheckCircle,
     Globe,
+    BookOpen,
     Users,
     MessageSquare,
     Settings,
-    Shield
 } from "lucide-react";
 
 const navSecondary = [
@@ -70,6 +70,11 @@ const NAV_ITEMS = {
         url: "/cms/publisher-editor",
         icon: Globe,
     },
+    docs: {
+        name: "Документация",
+        url: "/cms/docs",
+        icon: BookOpen,
+    },
     users: {
         name: "Пользователи",
         url: "/cms/admin",
@@ -89,12 +94,12 @@ const NAV_ITEMS = {
 
 // Define role access map
 const ROLE_NAV_MAP: Record<string, (keyof typeof NAV_ITEMS)[]> = {
-    user: ["dashboard"],
-    editor: ["dashboard", "myContent"],
-    chief_editor: ["dashboard", "reviewQueue", "myContent"], // Chief editors can also write
-    publishing_editor: ["dashboard", "publishing"],
-    moderator: ["dashboard"], // Comments removed temporarily
-    admin: ["dashboard", "users", "settings", "reviewQueue", "publishing", "myContent"], // Admin sees everything
+    user: ["dashboard", "docs"],
+    editor: ["dashboard", "myContent", "docs"],
+    chief_editor: ["dashboard", "reviewQueue", "myContent", "docs"], // Chief editors can also write
+    publishing_editor: ["dashboard", "publishing", "docs"],
+    moderator: ["dashboard", "docs"], // Comments removed temporarily
+    admin: ["dashboard", "users", "settings", "reviewQueue", "publishing", "myContent", "docs"], // Admin sees everything
 };
 
 interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
@@ -108,10 +113,10 @@ export function AppSidebar({ user, ...props }: AppSidebarProps) {
         avatar: user.avatar_url || "",
     }
 
-    const allowedNavKeys = ROLE_NAV_MAP[user.role] || ["dashboard"];
+    const allowedNavKeys = ROLE_NAV_MAP[user.role] || ["dashboard", "docs"];
     // Special check for Admin to ensure they have the role admin even if ROLE nav map misses it
     const finalNavKeys = user.role === 'admin' ?
-        ["users", "dashboard", "reviewQueue", "publishing", "myContent"] as (keyof typeof NAV_ITEMS)[]
+        ["users", "dashboard", "reviewQueue", "publishing", "myContent", "docs"] as (keyof typeof NAV_ITEMS)[]
         : allowedNavKeys;
 
     const navItems = finalNavKeys.map(key => NAV_ITEMS[key]);
