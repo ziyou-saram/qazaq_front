@@ -7,6 +7,9 @@ async function loadDocsContent() {
         path.resolve(process.cwd(), "../README_CMS.md"),
         path.resolve(process.cwd(), "../../README_CMS.md"),
         path.resolve(process.cwd(), "../../../README_CMS.md"),
+        path.resolve(process.cwd(), "../../../../README_CMS.md"),
+        path.resolve(process.cwd(), "../../../../../README_CMS.md"),
+        path.resolve(process.cwd(), "../../../../../../README_CMS.md"),
     ];
 
     for (const filePath of candidates) {
