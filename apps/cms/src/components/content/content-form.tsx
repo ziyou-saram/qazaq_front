@@ -42,17 +42,23 @@ const contentSchema = z.object({
 
 export type ContentFormValues = z.infer<typeof contentSchema>;
 
+
 interface ContentFormProps {
     defaultValues?: Partial<ContentFormValues>;
-    onSubmit: (values: ContentFormValues) => Promise<void>;
+    onSubmit: (values: ContentFormValues) => Promise<any>;
     submitLabel?: string;
+    accessToken?: string;
 }
 
-export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохранить" }: ContentFormProps) {
+export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохранить", accessToken }: ContentFormProps) {
     const [isPending, startTransition] = useTransition();
     const [categories, setCategories] = useState<Category[]>([]);
 
+
     useEffect(() => {
+        if (accessToken) {
+            api.setAccessToken(accessToken);
+        }
         const fetchCategories = async () => {
             try {
                 const response = await api.categories.getAll(0, 100);
@@ -62,7 +68,7 @@ export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохра
             }
         };
         fetchCategories();
-    }, []);
+    }, [accessToken]);
 
     const form = useForm({
         resolver: zodResolver(contentSchema),
@@ -130,8 +136,8 @@ export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохра
                             <FormItem>
                                 <FormLabel>Категория</FormLabel>
                                 <Select
-                                    onValueChange={(value) => field.onChange(value ? parseInt(value) : undefined)}
-                                    defaultValue={field.value ? field.value.toString() : ""}
+                                    onValueChange={(value) => field.onChange((value && value !== "0") ? parseInt(value) : undefined)}
+                                    defaultValue={field.value?.toString() || "0"}
                                 >
                                     <FormControl>
                                         <SelectTrigger>

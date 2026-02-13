@@ -2,10 +2,11 @@ import { notFound, redirect } from "next/navigation";
 import { Link } from "lucide-react";
 import { ContentForm } from "@/components/content/content-form";
 import { updateArticle } from "@/actions/articles";
-import { submitForReview } from "@/actions/submit-review";
 import { getServerApi } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { SubmitForReviewButton } from "@/components/content/submit-button";
+import { submitForReview } from "@/actions/submit-review";
 
 interface Props {
     params: Promise<{ id: string }>;
@@ -15,6 +16,10 @@ export default async function EditContentPage({ params }: Props) {
     const { id } = await params;
     const contentId = parseInt(id);
     if (isNaN(contentId)) notFound();
+
+    const { cookies } = await import("next/headers");
+    const cookieStore = await cookies();
+    const token = cookieStore.get("access_token")?.value;
 
     const api = await getServerApi();
     let content;
@@ -52,11 +57,7 @@ export default async function EditContentPage({ params }: Props) {
                     </p>
                 </div>
                 {(content.status === "draft" || content.status === "needs_revision") && (
-                    <form action={submitAction}>
-                        <Button type="submit" variant="default">
-                            {content.status === "needs_revision" ? "Отправить повторно" : "Отправить на проверку"}
-                        </Button>
-                    </form>
+                    <SubmitForReviewButton contentId={contentId} status={content.status} />
                 )}
             </div>
 
@@ -80,6 +81,7 @@ export default async function EditContentPage({ params }: Props) {
                 }}
                 onSubmit={updateAction}
                 submitLabel="Сохранить изменения"
+                accessToken={token}
             />
         </div>
     );
