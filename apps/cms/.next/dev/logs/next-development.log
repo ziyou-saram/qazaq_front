@@ -1,8 +1,141 @@
-[00:00:00.428] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.465] Server  LOG     ✓ Ready in 324ms
-[00:00:01.917] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
-[00:00:01.917] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:07.533] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/88501700-2ba6-4823-9270-b59869592d6a.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:32.625] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
-[00:00:36.197] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:41.280] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:00.732] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.796] Server  LOG     ✓ Ready in 633ms
+[00:00:02.627] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:20.482] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:34.574] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[00:01:31.736] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/f2860624-f064-4d15-af8c-866559e914b9.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:42.788] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/1328ebf6-0e3a-4b4b-b975-680020df41cd.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:16.405] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:17.488] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:23.087] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:24.807] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:28.357] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[00:03:28.357] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/1328ebf6-0e3a-4b4b-b975-680020df41cd.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:47.931] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:53.276] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:02:58.281] Server  LOG     ✓ Compiled in 323ms
+[01:20:30.490] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:20:54.009] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:20:54.514] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:20:54.738] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:22:42.242] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.253] Server  ERROR   Failed to fetch content TypeError: fetch failed
+[01:22:42.279] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.281] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.313] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.316] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.346] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.351] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.362] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.365] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:22:42.385] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:30:57.776] Server  ERROR   Failed to fetch content Error: HTTP 500: Internal Server Error
+[01:30:58.570] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:03.274] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[01:31:10.395] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[01:31:10.395] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:12.125] Server  ERROR   Failed to fetch review queue Error: HTTP 500: Internal Server Error
+[01:31:12.849] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:17.023] Server  ERROR   Failed to fetch review queue Error: HTTP 500: Internal Server Error
+[01:31:17.464] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:38.335] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:39.233] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:42.760] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[01:31:42.760] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/cb00539d-a5fb-4065-9e2e-bdac6f89f8d2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:09.508] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:32:27.469] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:32:31.654] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[01:32:31.654] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/1328ebf6-0e3a-4b4b-b975-680020df41cd.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:13:24.188] Server  ERROR   Failed to fetch content Error: Not authenticated
+[02:13:25.003] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:13:33.407] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:14:02.844] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:14:02.844] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/1328ebf6-0e3a-4b4b-b975-680020df41cd.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:14:11.229] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:14:12.378] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:14:14.473] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:14:25.134] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:14:28.624] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:14:28.624] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/1328ebf6-0e3a-4b4b-b975-680020df41cd.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:14:47.174] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:15:19.657] Browser WARN    Image with src "/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:15:19.657] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:15:20.149] Server  LOG     ✓ Compiled in 26ms
+[02:15:21.437] Server  LOG     ✓ Compiled in 21ms
+[02:15:22.011] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:15:24.501] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:15:49.761] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:15:50.753] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:16:04.017] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/9924dda1-ea01-4601-a461-aea9a3d26c58.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:16:13.112] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:16:17.414] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:16:28.622] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:19:49.820] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:19:51.193] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:20:02.027] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/ce515887-92cc-4a1b-95bf-ba92e2b79ee6.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:20:05.585] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:20:08.314] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:20:09.182] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:20:12.343] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:20:12.343] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/ce515887-92cc-4a1b-95bf-ba92e2b79ee6.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:20:14.432] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:20:19.201] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:20:33.067] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:20:39.627] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:20:39.627] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/1328ebf6-0e3a-4b4b-b975-680020df41cd.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:21:58.756] Server  LOG     ✓ Compiled in 25ms
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:04.619] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/cms/editor. Falling back to browser navigation. {}
+[02:22:05.161] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:00.067] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:05.074] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link']. This can lead to issues.
+[02:23:05.074] Browser WARN    Image with src "https://qazaq.s3.eu-north-1.amazonaws.com/1328ebf6-0e3a-4b4b-b975-680020df41cd.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:23:10.520] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:14.745] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:25.304] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:26.349] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:30.714] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:32.346] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:23:33.455] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:25:20.839] Server  LOG     ✓ Compiled in 26ms
+[02:25:22.080] Server  LOG     ✓ Compiled in 20ms
+[02:25:35.886] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

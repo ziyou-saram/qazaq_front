@@ -58,8 +58,12 @@ class APIClient {
     // Public endpoints (no authentication required)
     public = {
         // Categories
-        getCategories: () =>
-            this.request<CategoryList>('/public/categories'),
+        getCategories: (params?: { has_content?: boolean }) => {
+            const searchParams = new URLSearchParams();
+            if (params?.has_content) searchParams.set('has_content', 'true');
+            const query = searchParams.toString();
+            return this.request<CategoryList>(`/public/categories${query ? `?${query}` : ''}`);
+        },
 
         // Content
         getNews: (params?: { limit?: number; skip?: number; category_id?: number }) => {
@@ -99,6 +103,28 @@ class APIClient {
             const query = searchParams.toString();
             return this.request<CommentList>(
                 `/public/content/${contentId}/comments${query ? `?${query}` : ''}`
+            );
+        },
+
+        search: (q: string, params?: { limit?: number; skip?: number }) => {
+            const searchParams = new URLSearchParams();
+            searchParams.set('q', q);
+            if (params?.limit !== undefined) searchParams.set('limit', String(params.limit));
+            if (params?.skip !== undefined) searchParams.set('skip', String(params.skip));
+            const query = searchParams.toString();
+            return this.request<PaginatedResponse<ContentListItem>>(
+                `/public/search?${query}`
+            );
+        },
+
+        getContentByCategory: (slug: string, params?: { limit?: number; skip?: number; search?: string }) => {
+            const searchParams = new URLSearchParams();
+            if (params?.limit !== undefined) searchParams.set('limit', String(params.limit));
+            if (params?.skip !== undefined) searchParams.set('skip', String(params.skip));
+            if (params?.search !== undefined) searchParams.set('search', String(params.search));
+            const query = searchParams.toString();
+            return this.request<PaginatedResponse<ContentListItem>>(
+                `/public/categories/${slug}/content${query ? `?${query}` : ''}`
             );
         },
     };

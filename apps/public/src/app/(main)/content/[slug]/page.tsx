@@ -214,7 +214,7 @@ export default function ContentSlugPage(props: { params: Promise<{ slug: string 
                     <ContentSkeleton />
                 ) : (
                     <>
-                        <div className="grid gap-4 justify-center-safe text-center">
+                        <div className="grid gap-4 justify-center-safe text-center w-full max-w-6xl mx-auto">
                             <p className="text-muted-foreground">
                                 {new Date(content.published_at || content.created_at).toLocaleDateString()}
                             </p>

@@ -314,6 +314,11 @@ function useFeaturedContent() {
                 ...news.items,
                 ...articles.items
             ].sort((a, b)=>{
+                // Sort by pinned status first
+                if (a.is_pinned !== b.is_pinned) {
+                    return a.is_pinned ? -1 : 1;
+                }
+                // Then by date
                 const aDate = new Date(a.published_at || a.created_at).getTime();
                 const bDate = new Date(b.published_at || b.created_at).getTime();
                 return bDate - aDate;
@@ -709,14 +714,14 @@ function Home() {
     }, void 0, true);
 }
 function FeaturedContent({ content, categoryName }) {
-    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url) || "https://images.unsplash.com/photo-1768639527374-5a0071b66fd7";
+    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Item"], {
         className: "h-fit lg:sticky lg:top-0",
         asChild: true,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
             href: `/content/${content.slug}`,
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemHeader"], {
+                imageUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemHeader"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         src: imageUrl,
                         alt: content.title,
@@ -726,12 +731,12 @@ function FeaturedContent({ content, categoryName }) {
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
                         lineNumber: 115,
-                        columnNumber: 11
+                        columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
                     lineNumber: 114,
-                    columnNumber: 9
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
                     children: [
@@ -740,7 +745,7 @@ function FeaturedContent({ content, categoryName }) {
                             children: content.title
                         }, void 0, false, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 124,
+                            lineNumber: 125,
                             columnNumber: 11
                         }, this),
                         content.excerpt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemDescription"], {
@@ -748,13 +753,13 @@ function FeaturedContent({ content, categoryName }) {
                             children: content.excerpt
                         }, void 0, false, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 128,
+                            lineNumber: 129,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 123,
+                    lineNumber: 124,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -764,30 +769,30 @@ function FeaturedContent({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 133,
+                    lineNumber: 134,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 113,
+            lineNumber: 112,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 112,
+        lineNumber: 111,
         columnNumber: 5
     }, this);
 }
 function FeaturedContentSmall({ content, categoryName }) {
-    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url) || "https://images.unsplash.com/photo-1764377724194-c4b7356a4851";
+    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Item"], {
         className: "h-fit",
         asChild: true,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
             href: `/content/${content.slug}`,
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemHeader"], {
+                imageUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemHeader"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         src: imageUrl,
                         alt: content.title,
@@ -796,13 +801,13 @@ function FeaturedContentSmall({ content, categoryName }) {
                         className: "aspect-square w-full rounded-sm object-cover"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 157,
-                        columnNumber: 11
+                        lineNumber: 158,
+                        columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 156,
-                    columnNumber: 9
+                    lineNumber: 157,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemTitle"], {
@@ -810,12 +815,12 @@ function FeaturedContentSmall({ content, categoryName }) {
                         children: content.title
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 166,
+                        lineNumber: 168,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 165,
+                    lineNumber: 167,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -825,7 +830,7 @@ function FeaturedContentSmall({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 170,
+                    lineNumber: 172,
                     columnNumber: 9
                 }, this)
             ]
@@ -841,7 +846,7 @@ function FeaturedContentSmall({ content, categoryName }) {
     }, this);
 }
 function NewsCard({ content, categoryName }) {
-    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url) || "https://images.unsplash.com/photo-1764377724194-c4b7356a4851";
+    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Item"], {
         className: "h-fit gap-4 lg:gap-8",
         asChild: true,
@@ -849,7 +854,7 @@ function NewsCard({ content, categoryName }) {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
             href: `/content/${content.slug}`,
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemMedia"], {
+                imageUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemMedia"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         src: imageUrl,
                         alt: content.title,
@@ -858,13 +863,13 @@ function NewsCard({ content, categoryName }) {
                         className: "aspect-square w-full rounded-sm object-cover size-48 lg:size-56"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 194,
-                        columnNumber: 11
+                        lineNumber: 196,
+                        columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 193,
-                    columnNumber: 9
+                    lineNumber: 195,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
                     children: [
@@ -873,7 +878,7 @@ function NewsCard({ content, categoryName }) {
                             children: content.title
                         }, void 0, false, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 203,
+                            lineNumber: 206,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -883,36 +888,36 @@ function NewsCard({ content, categoryName }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                            lineNumber: 206,
+                            lineNumber: 209,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 202,
+                    lineNumber: 205,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 192,
+            lineNumber: 193,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 191,
+        lineNumber: 192,
         columnNumber: 5
     }, this);
 }
 function ArticleCard({ content, categoryName }) {
-    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url) || "https://images.unsplash.com/photo-1764377724194-c4b7356a4851";
+    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Item"], {
         className: "h-fit",
         asChild: true,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
             href: `/content/${content.slug}`,
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemHeader"], {
+                imageUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemHeader"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         src: imageUrl,
                         alt: content.title,
@@ -921,13 +926,13 @@ function ArticleCard({ content, categoryName }) {
                         className: "aspect-square w-full rounded-sm object-cover"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 231,
-                        columnNumber: 11
+                        lineNumber: 234,
+                        columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 230,
-                    columnNumber: 9
+                    lineNumber: 233,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemContent"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemTitle"], {
@@ -935,12 +940,12 @@ function ArticleCard({ content, categoryName }) {
                         children: content.title
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 240,
+                        lineNumber: 244,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 239,
+                    lineNumber: 243,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -950,18 +955,18 @@ function ArticleCard({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                    lineNumber: 244,
+                    lineNumber: 248,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 229,
+            lineNumber: 231,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 228,
+        lineNumber: 230,
         columnNumber: 5
     }, this);
 }
@@ -975,7 +980,7 @@ const Hero = ()=>{
                     "Code",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 257,
+                        lineNumber: 261,
                         columnNumber: 76
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -983,7 +988,7 @@ const Hero = ()=>{
                         children: "&"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 257,
+                        lineNumber: 261,
                         columnNumber: 82
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -991,23 +996,23 @@ const Hero = ()=>{
                         children: "Culture"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                        lineNumber: 257,
+                        lineNumber: 261,
                         columnNumber: 121
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-                lineNumber: 257,
+                lineNumber: 261,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-            lineNumber: 256,
+            lineNumber: 260,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/page.tsx",
-        lineNumber: 255,
+        lineNumber: 259,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

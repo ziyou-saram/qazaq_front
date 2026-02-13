@@ -1,32 +1,38 @@
 import Link from "next/link";
-import { Plus, Pencil, Trash } from "lucide-react";
+import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
 import { getServerApi } from "@/lib/api";
 import { ContentListItem } from "@/lib/types";
+import { ContentTable } from "@/components/content/content-table";
 
-const statusMap: Record<string, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
-    draft: { label: "Черновик", variant: "secondary" },
-    in_review: { label: "На проверке", variant: "default" },
-    needs_revision: { label: "Требует правок", variant: "destructive" },
-    approved: { label: "Одобрено", variant: "outline" },
-    published: { label: "Опубликовано", variant: "default" }, // Usually green if we had it
-};
+interface PageProps {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
 
-export default async function EditorDashboardPage() {
+export default async function EditorDashboardPage({ searchParams }: PageProps) {
     const api = await getServerApi();
-    let content: { items: ContentListItem[] } = { items: [] };
+    const resolvedSearchParams = await searchParams;
+    const page = Number(resolvedSearchParams.page) || 1;
+    const limit = Number(resolvedSearchParams.limit) || 20;
+    const skip = Number(resolvedSearchParams.skip) || 0;
+    const search = resolvedSearchParams.search as string || "";
+    const status = resolvedSearchParams.status as string || "";
+
+    let content: { items: ContentListItem[]; total: number; skip: number; limit: number } = {
+        items: [],
+        total: 0,
+        skip: 0,
+        limit: 20
+    };
 
     try {
-        content = await api.request("/cms/editor/content");
+        const queryParams = new URLSearchParams();
+        queryParams.set("skip", skip.toString());
+        queryParams.set("limit", limit.toString());
+        if (search) queryParams.set("search", search);
+        if (status) queryParams.set("status", status);
+
+        content = await api.request(`/cms/editor/content?${queryParams.toString()}`);
     } catch (e) {
         console.error("Failed to fetch content", e);
     }
@@ -43,54 +49,10 @@ export default async function EditorDashboardPage() {
                 </Button>
             </div>
 
-            <div className="rounded-md border">
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead>Заголовок</TableHead>
-                            <TableHead>Тип</TableHead>
-                            <TableHead>Статус</TableHead>
-                            <TableHead>Дата создания</TableHead>
-                            <TableHead className="w-[100px]">Действия</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {content.items.length === 0 ? (
-                            <TableRow>
-                                <TableCell colSpan={5} className="text-center h-24 text-muted-foreground">
-                                    У вас пока нет материалов. Создайте первый!
-                                </TableCell>
-                            </TableRow>
-                        ) : (
-                            content.items.map((item) => (
-                                <TableRow key={item.id}>
-                                    <TableCell className="font-medium">{item.title}</TableCell>
-                                    <TableCell>
-                                        {item.type === "article" ? "Статья" : "Новость"}
-                                    </TableCell>
-                                    <TableCell>
-                                        <Badge variant={statusMap[item.status]?.variant || "outline"}>
-                                            {statusMap[item.status]?.label || item.status}
-                                        </Badge>
-                                    </TableCell>
-                                    <TableCell>
-                                        {new Date(item.created_at).toLocaleDateString("ru-RU")}
-                                    </TableCell>
-                                    <TableCell>
-                                        <div className="flex gap-2">
-                                            <Button variant="ghost" size="icon" asChild>
-                                                <Link href={`/cms/editor/${item.id}`}>
-                                                    <Pencil className="h-4 w-4" />
-                                                </Link>
-                                            </Button>
-                                        </div>
-                                    </TableCell>
-                                </TableRow>
-                            ))
-                        )}
-                    </TableBody>
-                </Table>
-            </div>
+            <ContentTable
+                data={content}
+                baseUrl="/cms/editor"
+            />
         </div>
     );
 }

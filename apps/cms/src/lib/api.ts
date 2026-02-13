@@ -1,4 +1,4 @@
-import type { APIError, UserResponse } from "./types";
+import type { APIError, Category, CategoryCreate, CategoryList, CategoryUpdate, UserResponse } from "./types";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.qazaq.kz";
 
@@ -36,6 +36,7 @@ class APIClient {
         const response = await fetch(url, {
             ...options,
             headers,
+            credentials: "include",
         });
 
         if (!response.ok) {
@@ -96,6 +97,38 @@ class APIClient {
                 body: formData,
             });
         }
+    };
+
+    public categories = {
+        getAll: (skip = 0, limit = 100) =>
+            this.request<CategoryList>(`/cms/categories?skip=${skip}&limit=${limit}`),
+        getOne: (id: number) =>
+            this.request<Category>(`/cms/categories/${id}`),
+        create: (data: CategoryCreate) =>
+            this.request<Category>("/cms/categories", {
+                method: "POST",
+                body: JSON.stringify(data),
+            }),
+        update: (id: number, data: CategoryUpdate) =>
+            this.request<Category>(`/cms/categories/${id}`, {
+                method: "PUT",
+                body: JSON.stringify(data),
+            }),
+        delete: (id: number) =>
+            this.request<{ message: string }>(`/cms/categories/${id}`, {
+                method: "DELETE",
+            }),
+    };
+
+    public content = {
+        pin: (id: number) =>
+            this.request<{ message: string }>(`/cms/publishing/content/${id}/pin`, {
+                method: "POST",
+            }),
+        unpin: (id: number) =>
+            this.request<{ message: string }>(`/cms/publishing/content/${id}/unpin`, {
+                method: "POST",
+            }),
     };
 }
 

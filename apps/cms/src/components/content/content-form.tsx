@@ -1,10 +1,12 @@
 "use client";
 
-import { useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
+import { api } from "@/lib/api";
+import { Category } from "@/lib/types";
 import {
     Form,
     FormControl,
@@ -48,6 +50,19 @@ interface ContentFormProps {
 
 export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохранить" }: ContentFormProps) {
     const [isPending, startTransition] = useTransition();
+    const [categories, setCategories] = useState<Category[]>([]);
+
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await api.categories.getAll(0, 100);
+                setCategories(response.items);
+            } catch (error) {
+                console.error("Failed to fetch categories", error);
+            }
+        };
+        fetchCategories();
+    }, []);
 
     const form = useForm({
         resolver: zodResolver(contentSchema),
@@ -101,6 +116,35 @@ export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохра
                                     <SelectContent>
                                         <SelectItem value="article">Статья</SelectItem>
                                         <SelectItem value="news">Новость</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="category_id"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Категория</FormLabel>
+                                <Select
+                                    onValueChange={(value) => field.onChange(value ? parseInt(value) : undefined)}
+                                    defaultValue={field.value ? field.value.toString() : ""}
+                                >
+                                    <FormControl>
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Выберите категорию" />
+                                        </SelectTrigger>
+                                    </FormControl>
+                                    <SelectContent>
+                                        <SelectItem value="0">Без категории</SelectItem>
+                                        {categories.map((category) => (
+                                            <SelectItem key={category.id} value={category.id.toString()}>
+                                                {category.name}
+                                            </SelectItem>
+                                        ))}
                                     </SelectContent>
                                 </Select>
                                 <FormMessage />

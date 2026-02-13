@@ -56,6 +56,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../src/app/cms/categories/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/cms/categories">> = Specific
+  const handler = {} as typeof import("../../../src/app/cms/categories/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/cms/chief-editor/[id]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/cms/chief-editor/[id]">> = Specific
@@ -78,6 +87,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/cms/dashboard">> = Specific
   const handler = {} as typeof import("../../../src/app/cms/dashboard/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/cms/docs/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/cms/docs">> = Specific
+  const handler = {} as typeof import("../../../src/app/cms/docs/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -141,6 +159,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/cms/publisher-editor">> = Specific
   const handler = {} as typeof import("../../../src/app/cms/publisher-editor/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/cms/publisher-editor/published/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/cms/publisher-editor/published">> = Specific
+  const handler = {} as typeof import("../../../src/app/cms/publisher-editor/published/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

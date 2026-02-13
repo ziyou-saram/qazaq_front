@@ -97,6 +97,10 @@ export default function Home() {
   );
 }
 
+import { Pin } from "lucide-react";
+
+// ... existing imports ...
+
 function FeaturedContent({
   content,
   categoryName,
@@ -122,7 +126,8 @@ function FeaturedContent({
           </ItemHeader>
         )}
         <ItemContent>
-          <ItemTitle className="text-foreground font-medium text-3xl md:text-4xl lg:text-5xl">
+          <ItemTitle className="text-foreground font-medium text-3xl md:text-4xl lg:text-5xl flex items-center gap-2">
+            {content.is_pinned && <Pin className="h-6 w-6 md:h-8 md:w-8 text-primary rotate-45 shrink-0" />}
             {content.title}
           </ItemTitle>
           {content.excerpt && (
@@ -165,7 +170,8 @@ function FeaturedContentSmall({
           </ItemHeader>
         )}
         <ItemContent>
-          <ItemTitle className="text-foreground font-medium text-lg md:text-xl lg:text-2xl">
+          <ItemTitle className="text-foreground font-medium text-lg md:text-xl lg:text-2xl flex items-center gap-2">
+            {content.is_pinned && <Pin className="h-4 w-4 md:h-5 md:w-5 text-primary rotate-45 shrink-0" />}
             {content.title}
           </ItemTitle>
         </ItemContent>

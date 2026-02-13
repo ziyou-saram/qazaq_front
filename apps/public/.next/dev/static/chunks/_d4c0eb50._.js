@@ -768,14 +768,14 @@ _s(ArticlesPage, "X99uWqNfegBJxM7m8xtKVXf9w58=", false, function() {
 });
 _c = ArticlesPage;
 function HeroArticleCard({ content, categoryName }) {
-    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url) || "https://images.unsplash.com/photo-1768639527374-5a0071b66fd7";
+    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Item"], {
         className: "h-fit lg:sticky lg:top-0",
         asChild: true,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             href: `/content/${content.slug}`,
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemHeader"], {
+                imageUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemHeader"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         src: imageUrl,
                         alt: content.title,
@@ -785,12 +785,12 @@ function HeroArticleCard({ content, categoryName }) {
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
                         lineNumber: 119,
-                        columnNumber: 21
+                        columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
                     lineNumber: 118,
-                    columnNumber: 17
+                    columnNumber: 21
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemContent"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemTitle"], {
@@ -798,12 +798,12 @@ function HeroArticleCard({ content, categoryName }) {
                         children: content.title
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                        lineNumber: 128,
+                        lineNumber: 129,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                    lineNumber: 127,
+                    lineNumber: 128,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -813,31 +813,31 @@ function HeroArticleCard({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                    lineNumber: 132,
+                    lineNumber: 133,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-            lineNumber: 117,
+            lineNumber: 116,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-        lineNumber: 116,
+        lineNumber: 115,
         columnNumber: 9
     }, this);
 }
 _c1 = HeroArticleCard;
 function SquareArticleCard({ content, categoryName }) {
-    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url) || "https://images.unsplash.com/photo-1764377724194-c4b7356a4851";
+    const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resolveMediaUrl"])(content.cover_image_url);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Item"], {
         className: "h-fit",
         asChild: true,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             href: `/content/${content.slug}`,
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemHeader"], {
+                imageUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemHeader"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         src: imageUrl,
                         alt: content.title,
@@ -846,13 +846,13 @@ function SquareArticleCard({ content, categoryName }) {
                         className: "aspect-square w-full rounded-sm object-cover"
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                        lineNumber: 156,
-                        columnNumber: 21
+                        lineNumber: 157,
+                        columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                    lineNumber: 155,
-                    columnNumber: 17
+                    lineNumber: 156,
+                    columnNumber: 21
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemContent"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemTitle"], {
@@ -860,12 +860,12 @@ function SquareArticleCard({ content, categoryName }) {
                         children: content.title
                     }, void 0, false, {
                         fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                        lineNumber: 165,
+                        lineNumber: 167,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                    lineNumber: 164,
+                    lineNumber: 166,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$public$2f$src$2f$components$2f$ui$2f$item$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ItemFooter"], {
@@ -875,7 +875,7 @@ function SquareArticleCard({ content, categoryName }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/apps/public/src/app/(main)/articles/page.tsx",
-                    lineNumber: 169,
+                    lineNumber: 171,
                     columnNumber: 17
                 }, this)
             ]

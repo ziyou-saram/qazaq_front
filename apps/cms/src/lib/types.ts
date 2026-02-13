@@ -14,6 +14,20 @@ export interface CategoryList {
     total: number;
 }
 
+export interface CategoryCreate {
+    name: string;
+    description?: string;
+    parent_id?: number | null;
+    order?: number;
+}
+
+export interface CategoryUpdate {
+    name?: string;
+    description?: string;
+    parent_id?: number | null;
+    order?: number;
+}
+
 export interface UserPublicProfile {
     id: number;
     username: string;
@@ -47,6 +61,7 @@ export interface ContentListItem {
     excerpt?: string | null;
     type: ContentType;
     status: ContentStatus;
+    is_pinned: boolean;
     cover_image_url?: string | null;
     category_id?: number | null;
     author: UserPublicProfile;

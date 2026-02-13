@@ -57,6 +57,7 @@ export interface ContentListItem {
     created_at: string;
     likes_count: number;
     comments_count: number;
+    is_pinned: boolean;
 }
 
 export interface Content extends ContentListItem {

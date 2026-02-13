@@ -1,24 +1,33 @@
-import Link from "next/link";
-import { Eye } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
 import { getServerApi } from "@/lib/api";
 import { ContentListItem } from "@/lib/types";
+import { ContentTable } from "@/components/content/content-table";
 
-export default async function ChiefEditorDashboardPage() {
+interface PageProps {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function ChiefEditorDashboardPage({ searchParams }: PageProps) {
     const api = await getServerApi();
-    let queue: { items: ContentListItem[] } = { items: [] };
+    const resolvedSearchParams = await searchParams;
+    const page = Number(resolvedSearchParams.page) || 1;
+    const limit = Number(resolvedSearchParams.limit) || 20;
+    const skip = Number(resolvedSearchParams.skip) || 0;
+    const search = resolvedSearchParams.search as string || "";
+
+    let queue: { items: ContentListItem[]; total: number; skip: number; limit: number } = {
+        items: [],
+        total: 0,
+        skip: 0,
+        limit: 20
+    };
 
     try {
-        queue = await api.request("/cms/chief-editor/review-queue");
+        const queryParams = new URLSearchParams();
+        queryParams.set("skip", skip.toString());
+        queryParams.set("limit", limit.toString());
+        if (search) queryParams.set("search", search);
+
+        queue = await api.request(`/cms/chief-editor/review-queue?${queryParams.toString()}`);
     } catch (e) {
         console.error("Failed to fetch review queue", e);
     }
@@ -29,50 +38,11 @@ export default async function ChiefEditorDashboardPage() {
                 <h1 className="text-2xl font-bold tracking-tight">Очередь проверки</h1>
             </div>
 
-            <div className="rounded-md border">
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead>Заголовок</TableHead>
-                            <TableHead>Автор</TableHead>
-                            <TableHead>Тип</TableHead>
-                            <TableHead>Дата обновления</TableHead>
-                            <TableHead className="w-[100px]">Действия</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {queue.items.length === 0 ? (
-                            <TableRow>
-                                <TableCell colSpan={5} className="text-center h-24 text-muted-foreground">
-                                    Очередь проверки пуста.
-                                </TableCell>
-                            </TableRow>
-                        ) : (
-                            queue.items.map((item) => (
-                                <TableRow key={item.id}>
-                                    <TableCell className="font-medium">{item.title}</TableCell>
-                                    <TableCell>
-                                        {item.author?.first_name} {item.author?.last_name}
-                                    </TableCell>
-                                    <TableCell>
-                                        {item.type === "article" ? "Статья" : "Новость"}
-                                    </TableCell>
-                                    <TableCell>
-                                        {new Date(item.updated_at).toLocaleDateString("ru-RU")}
-                                    </TableCell>
-                                    <TableCell>
-                                        <Button variant="ghost" size="icon" asChild>
-                                            <Link href={`/cms/chief-editor/${item.id}`}>
-                                                <Eye className="h-4 w-4" />
-                                            </Link>
-                                        </Button>
-                                    </TableCell>
-                                </TableRow>
-                            ))
-                        )}
-                    </TableBody>
-                </Table>
-            </div>
+            <ContentTable
+                data={queue}
+                baseUrl="/cms/chief-editor"
+                isChiefEditor={true}
+            />
         </div>
     );
 }

@@ -73,6 +73,11 @@ export function useFeaturedContent() {
         ])
             .then(([news, articles]) => {
                 const combined = [...news.items, ...articles.items].sort((a, b) => {
+                    // Sort by pinned status first
+                    if (a.is_pinned !== b.is_pinned) {
+                        return a.is_pinned ? -1 : 1;
+                    }
+                    // Then by date
                     const aDate = new Date(a.published_at || a.created_at).getTime();
                     const bDate = new Date(b.published_at || b.created_at).getTime();
                     return bDate - aDate;
