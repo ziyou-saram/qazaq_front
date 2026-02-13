@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: "Управление категориями контента",
 };
 
-export default function CategoriesPage() {
+export default async function CategoriesPage() {
     const { cookies } = await import("next/headers");
     const cookieStore = await cookies();
     const token = cookieStore.get("access_token")?.value;
