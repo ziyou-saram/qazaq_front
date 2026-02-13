@@ -38,7 +38,12 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default function CategoriesClient() {
+
+interface CategoriesClientProps {
+    accessToken?: string;
+}
+
+export default function CategoriesClient({ accessToken }: CategoriesClientProps) {
     const [categories, setCategories] = useState<Category[]>([]);
     const [loading, setLoading] = useState(true);
     const [isCreateOpen, setIsCreateOpen] = useState(false);
@@ -66,9 +71,13 @@ export default function CategoriesClient() {
         }
     };
 
+
     useEffect(() => {
+        if (accessToken) {
+            api.setAccessToken(accessToken);
+        }
         fetchCategories();
-    }, []);
+    }, [accessToken]);
 
     const handleCreate = async () => {
         setSaving(true);

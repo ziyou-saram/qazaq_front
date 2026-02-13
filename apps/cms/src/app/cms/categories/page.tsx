@@ -7,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function CategoriesPage() {
-    return <CategoriesClient />;
+    const { cookies } = await import("next/headers");
+    const cookieStore = await cookies();
+    const token = cookieStore.get("access_token")?.value;
+
+    return <CategoriesClient accessToken={token} />;
 }
