@@ -1,4 +1,20 @@
 {
-  "node": {},
+  "node": {
+    "0071b58e57bf8ad354c8f76d591d46c824eb6781f1": {
+      "workers": {
+        "app/(main)/articles/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/(main)/articles/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/articles/page": "action-browser"
+      },
+      "exportedName": "deleteAuthCookie",
+      "filename": "apps/public/src/app/actions/auth.ts"
+    }
+  },
   "edge": {}
 }

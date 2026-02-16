@@ -106,11 +106,12 @@ class APIClient {
             );
         },
 
-        search: (q: string, params?: { limit?: number; skip?: number }) => {
+        search: (params?: { q?: string; limit?: number; skip?: number; category_id?: number }) => {
             const searchParams = new URLSearchParams();
-            searchParams.set('q', q);
+            if (params?.q) searchParams.set('q', params.q);
             if (params?.limit !== undefined) searchParams.set('limit', String(params.limit));
             if (params?.skip !== undefined) searchParams.set('skip', String(params.skip));
+            if (params?.category_id !== undefined) searchParams.set('category_id', String(params.category_id));
             const query = searchParams.toString();
             return this.request<PaginatedResponse<ContentListItem>>(
                 `/public/search?${query}`

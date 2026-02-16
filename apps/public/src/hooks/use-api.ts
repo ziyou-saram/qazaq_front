@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useState } from 'react';
 import type { Category, Content, ContentListItem, PaginatedResponse } from '@/lib/types';
 import { api } from '@/lib/api';

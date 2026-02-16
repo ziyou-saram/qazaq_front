@@ -1,0 +1,41 @@
+import { Suspense } from "react";
+import { api } from "@/lib/api";
+import { ContentListClient } from "@/components/content/content-list-client";
+import { ContentSkeleton } from "@/components/ui/skeleton";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'news' });
+    const tCommon = await getTranslations({ locale, namespace: 'home' });
+    // Reusing meta_description from home for now or specific news description if needed
+
+    return {
+        title: `${t('title')} - Qazaq News`,
+        description: tCommon('meta_description'),
+    };
+}
+
+const PAGE_SIZE = 9;
+
+export default async function NewsPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'news' });
+
+    const [data, categories] = await Promise.all([
+        api.public.getNews({ limit: PAGE_SIZE, skip: 0 }),
+        api.public.getCategories(),
+    ]);
+
+    return (
+        <Suspense fallback={<ContentSkeleton />}>
+            <ContentListClient
+                initialItems={data.items}
+                total={data.total}
+                title={t('all_news')}
+                type="news"
+                categories={categories.items}
+            />
+        </Suspense>
+    );
+}

@@ -1,0 +1,118 @@
+{
+    "nav": {
+        "home": "Home",
+        "news": "News",
+        "articles": "Articles",
+        "categories": "Categories"
+    },
+    "auth": {
+        "login": "Login",
+        "logout": "Logout",
+        "register": "Register",
+        "login_title": "Login to your account",
+        "login_subtitle": "Enter your email below to login",
+        "email_label": "Email",
+        "password_label": "Password",
+        "forgot_password": "Forgot password?",
+        "logging_in": "Logging in...",
+        "no_account": "No account?",
+        "register_title": "Create an account",
+        "register_subtitle": "Fill the form below to create an account",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "username": "Username",
+        "confirm_password": "Confirm Password",
+        "confirm_password_desc": "Confirm your password.",
+        "password_min_length": "Must be at least 8 characters.",
+        "privacy_notice": "We use email to contact you. We do not share your email with anyone else.",
+        "creating": "Creating...",
+        "create_account": "Create Account",
+        "has_account": "Already have an account?",
+        "password_mismatch": "Passwords do not match.",
+        "login_error": "Login error",
+        "register_error": "Registration error"
+    },
+    "home": {
+        "latest_news": "Latest News",
+        "view_all": "View All",
+        "fresh_articles": "Fresh Articles",
+        "meta_title": "Qazaq News - Home",
+        "meta_description": "Latest news and articles from Kazakhstan"
+    },
+    "news": {
+        "title": "News",
+        "all_news": "All News"
+    },
+    "articles": {
+        "title": "Articles",
+        "all_articles": "All Articles"
+    },
+    "search": {
+        "placeholder": "Search...",
+        "results": "Search Results",
+        "no_results": "No results found",
+        "found": "Found: {count}"
+    },
+    "footer": {
+        "sections": "Sections",
+        "categories": "Categories",
+        "about": "About Us",
+        "socials": "Socials",
+        "about_project": "About Project",
+        "contacts": "Contacts",
+        "privacy": "Privacy Policy",
+        "copyright": "Copyright",
+        "rights": "Qazaq News © 2024–2026. All rights reserved."
+    },
+    "about": {
+        "meta_title": "About Us - Qazaq News",
+        "meta_description": "QAZAQ.KZ — smart and lively public media about people, ideas, and the future of Kazakhstan.",
+        "hero_title": "QAZAQ.KZ — smart and lively public media about people, ideas, and the future of Kazakhstan.",
+        "hero_subtitle": "Our principle is simple: A Unique Kazakhstan that has something to give to the world.",
+        "hero_description": "We are creating a platform for a generation that wants to understand processes, not just consume headlines. In the conditions of information noise and fragmented news, QAZAQ.KZ takes on the role of a navigator: we highlight the main things, explain the context, and translate the complex language of state decisions, reforms, and social changes into clear and precise language.",
+        "visualization_text": "Visualization: Present, Future, People",
+        "directions_title": "Our Directions",
+        "directions_description": "Our work is built around three key vectors of the country's development.",
+        "direction_present_title": "Present",
+        "direction_present_desc": "Key processes and decisions that affect the country today.",
+        "direction_future_title": "Future",
+        "direction_future_desc": "Technologies, industries, education, and new competencies forming the economy and society of tomorrow.",
+        "direction_people_title": "People",
+        "direction_people_desc": "Those who create change: entrepreneurs, scientists, volunteers, engineers, creative leaders.",
+        "culture_title": "Culture and Identity",
+        "culture_desc_1": "Culture occupies a special place in our agenda — as a space of identity, thinking, and values. We consider culture not as a separate sphere, but as the basis of the country's intellectual development: from language and history to creative industries and new forms of self-expression.",
+        "culture_desc_2": "Modern Kazakh culture is not only heritage but also the energy of renewal that forms national confidence and openness to the world.",
+        "mission_title": "Our Mission",
+        "mission_desc_1": "To form a new Kazakh intellectual culture: open to the world, confident in itself, and capable of conducting dialogue on equal terms.",
+        "mission_desc_2": "QAZAQ.KZ is media for those who value arguments, facts, and responsibility for words. We work with independent authors, experts, and a new generation of journalists, creating an environment in which responsible journalism becomes professional and sustainable.",
+        "mission_desc_3": "We do not form an opinion for you. We create a space where you can think independently."
+    },
+    "copyright": {
+        "title": "Copyright - Qazaq News",
+        "description": "Copyright information and rules for using QAZAQ.KZ materials",
+        "h1": "Copyright",
+        "p1": "All materials posted on the QAZAQ.KZ website, including texts, interviews, analytical materials, images, graphics, videos and other elements, are subject to copyright and are protected by the legislation of the Republic of Kazakhstan.",
+        "p2": "Use of the site's materials is permitted only with a mandatory active hyperlink to QAZAQ.KZ when reprinting on the Internet or with written permission from the editors when used in printed and other offline publications.",
+        "p3": "Partial citation is permitted provided the meaning of the material is preserved and the source is mandatory indicated.",
+        "h3_forbidden": "Prohibited:",
+        "li1": "copying materials without citing the source;",
+        "li2": "distortion or modification of the text without coordination with the editors;",
+        "li3": "use of materials for commercial purposes without written permission.",
+        "p4": "Rights to materials published with the authorship of invited experts belong to the authors, unless otherwise provided by the agreement.",
+        "p5": "The QAZAQ.KZ editors respect the copyrights of third parties. In case of detecting a possible violation, please report it to the address: [email].",
+        "footer_rights": "©️ QAZAQ.KZ, 2026. All rights reserved."
+    },
+    "categories": {
+        "it": "IT",
+        "politics": "Politics",
+        "sport": "Sport",
+        "economics": "Economics",
+        "technology": "Technology"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "read_more": "Read more",
+        "load_more": "Load more"
+    }
+}

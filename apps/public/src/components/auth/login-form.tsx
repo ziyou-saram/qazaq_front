@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { api } from "@/lib/api";
 import { setAuthTokens } from "@/lib/auth";
+import { setAuthCookie } from "@/app/actions/auth";
 
 export function LoginForm({
     className,
@@ -34,6 +35,7 @@ export function LoginForm({
         try {
             const tokens = await api.auth.login({ email, password });
             setAuthTokens(tokens);
+            await setAuthCookie(tokens.access_token);
             router.push("/");
         } catch (err) {
             const message = err instanceof Error ? err.message : "Ошибка входа";
