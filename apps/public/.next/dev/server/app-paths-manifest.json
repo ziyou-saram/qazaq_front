@@ -1,10 +1,4 @@
 {
-  "/[locale]/(main)/about/page": "app/[locale]/(main)/about/page.js",
-  "/[locale]/(main)/articles/page": "app/[locale]/(main)/articles/page.js",
-  "/[locale]/(main)/category/[slug]/page": "app/[locale]/(main)/category/[slug]/page.js",
-  "/[locale]/(main)/copyright/page": "app/[locale]/(main)/copyright/page.js",
-  "/[locale]/(main)/news/page": "app/[locale]/(main)/news/page.js",
   "/[locale]/(main)/page": "app/[locale]/(main)/page.js",
-  "/[locale]/(main)/search/page": "app/[locale]/(main)/search/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/[locale]/(main)/search/page": "app/[locale]/(main)/search/page.js"
 }

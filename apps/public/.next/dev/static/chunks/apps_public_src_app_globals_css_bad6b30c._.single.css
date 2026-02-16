@@ -1785,14 +1785,6 @@
     width: calc(var(--spacing) * 9);
   }
 
-  .w-24 {
-    width: calc(var(--spacing) * 24);
-  }
-
-  .w-48 {
-    width: calc(var(--spacing) * 48);
-  }
-
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
@@ -2271,10 +2263,6 @@
 
   .overflow-y-auto {
     overflow-y: auto;
-  }
-
-  .rounded {
-    border-radius: .25rem;
   }
 
   .rounded-\[2px\] {
