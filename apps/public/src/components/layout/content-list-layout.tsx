@@ -38,19 +38,26 @@ export function ContentListLayout({
     return (
         <>
             <div className="grid gap-4">
-                <h1 className="text-foreground font-medium text-3xl md:text-4xl lg:text-5xl">
-                    {title}
-                </h1>
-                <div className="grid gap-4 md:grid-cols-[3.5fr_1fr]">
+                <div className="flex items-end justify-between border-b-[3px] border-foreground pb-4 mb-4 mt-8">
+                    <div className="flex items-center gap-4">
+                        <div className="w-4 h-4 bg-primary shrink-0"></div>
+                        <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl text-foreground uppercase tracking-tight">
+                            {title}
+                        </h1>
+                    </div>
+                </div>
+                <div className="grid gap-8 md:grid-cols-[2.5fr_1fr] lg:grid-cols-[3fr_1fr] divide-y md:divide-y-0 md:divide-x divide-border mt-4 mb-12">
                     {loading && items.length === 0 ? (
                         <ContentSkeleton />
                     ) : hero ? (
-                        <HeroCard
-                            content={hero}
-                            categoryName={getCategoryName(hero.category_id)}
-                        />
+                        <div className="md:pr-8">
+                            <HeroCard
+                                content={hero}
+                                categoryName={getCategoryName(hero.category_id)}
+                            />
+                        </div>
                     ) : null}
-                    <div className="grid gap-4">
+                    <div className="flex flex-col gap-6 md:pl-8">
                         {loading && items.length === 0
                             ? Array.from({ length: 3 }).map((_, index) => (
                                 <ArticleCardSkeleton key={index} />
@@ -66,7 +73,7 @@ export function ContentListLayout({
                 </div>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
                 {rest.map((item) => (
                     <GridCard
                         key={item.id}
@@ -82,9 +89,9 @@ export function ContentListLayout({
                 {hasMore ? (
                     <div className="col-span-full flex items-center justify-center">
                         <Button
-                            variant={"secondary"}
+                            variant={"outline"}
                             size={"lg"}
-                            className="rounded-full"
+                            className="rounded-none border-2 border-border hover:border-foreground font-bold uppercase tracking-widest mt-12"
                             onClick={onLoadMore}
                             disabled={loading}
                         >

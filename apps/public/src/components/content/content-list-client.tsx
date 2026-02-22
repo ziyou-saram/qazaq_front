@@ -13,6 +13,7 @@ interface ContentListClientProps {
     title: string;
     type: "news" | "article";
     categories: Category[];
+    locale: string;
 }
 
 export function ContentListClient({
@@ -21,6 +22,7 @@ export function ContentListClient({
     title,
     type,
     categories,
+    locale,
 }: ContentListClientProps) {
     const [items, setItems] = useState<ContentListItem[]>(initialItems);
     const [loading, setLoading] = useState(false);
@@ -35,7 +37,7 @@ export function ContentListClient({
     const handleLoadMore = async () => {
         setLoading(true);
         try {
-            const params = { limit: PAGE_SIZE, skip };
+            const params = { limit: PAGE_SIZE, skip, language: locale };
             const response = type === "news"
                 ? await api.public.getNews(params)
                 : await api.public.getArticles(params); // Assuming getArticles follows same signature

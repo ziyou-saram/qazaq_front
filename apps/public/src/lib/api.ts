@@ -45,12 +45,14 @@ class APIClient {
                 const error: APIError = await response.json().catch(() => ({
                     detail: `HTTP ${response.status}: ${response.statusText}`,
                 }));
-                throw new Error(error.detail);
+                const err = new Error(error.detail) as Error & { status?: number };
+                err.status = response.status;
+                throw err;
             }
 
             return response.json();
         } catch (error) {
-            console.error(`API Error [${endpoint}]:`, error);
+            // Rethrow the error to be handled by the caller
             throw error;
         }
     }
@@ -66,26 +68,24 @@ class APIClient {
         },
 
         // Content
-        getNews: (params?: { limit?: number; skip?: number; category_id?: number }) => {
+        getNews: (params?: { limit?: number; skip?: number; category_id?: number; language?: string }) => {
             const searchParams = new URLSearchParams();
             if (params?.limit !== undefined) searchParams.set('limit', String(params.limit));
             if (params?.skip !== undefined) searchParams.set('skip', String(params.skip));
-            if (params?.category_id !== undefined) {
-                searchParams.set('category_id', String(params.category_id));
-            }
+            if (params?.category_id !== undefined) searchParams.set('category_id', String(params.category_id));
+            if (params?.language) searchParams.set('language', params.language);
             const query = searchParams.toString();
             return this.request<PaginatedResponse<ContentListItem>>(
                 `/public/news${query ? `?${query}` : ''}`
             );
         },
 
-        getArticles: (params?: { limit?: number; skip?: number; category_id?: number }) => {
+        getArticles: (params?: { limit?: number; skip?: number; category_id?: number; language?: string }) => {
             const searchParams = new URLSearchParams();
             if (params?.limit !== undefined) searchParams.set('limit', String(params.limit));
             if (params?.skip !== undefined) searchParams.set('skip', String(params.skip));
-            if (params?.category_id !== undefined) {
-                searchParams.set('category_id', String(params.category_id));
-            }
+            if (params?.category_id !== undefined) searchParams.set('category_id', String(params.category_id));
+            if (params?.language) searchParams.set('language', params.language);
             const query = searchParams.toString();
             return this.request<PaginatedResponse<ContentListItem>>(
                 `/public/articles${query ? `?${query}` : ''}`
@@ -106,23 +106,25 @@ class APIClient {
             );
         },
 
-        search: (params?: { q?: string; limit?: number; skip?: number; category_id?: number }) => {
+        search: (params?: { q?: string; limit?: number; skip?: number; category_id?: number; language?: string }) => {
             const searchParams = new URLSearchParams();
             if (params?.q) searchParams.set('q', params.q);
             if (params?.limit !== undefined) searchParams.set('limit', String(params.limit));
             if (params?.skip !== undefined) searchParams.set('skip', String(params.skip));
             if (params?.category_id !== undefined) searchParams.set('category_id', String(params.category_id));
+            if (params?.language) searchParams.set('language', params.language);
             const query = searchParams.toString();
             return this.request<PaginatedResponse<ContentListItem>>(
                 `/public/search?${query}`
             );
         },
 
-        getContentByCategory: (slug: string, params?: { limit?: number; skip?: number; search?: string }) => {
+        getContentByCategory: (slug: string, params?: { limit?: number; skip?: number; search?: string; language?: string }) => {
             const searchParams = new URLSearchParams();
             if (params?.limit !== undefined) searchParams.set('limit', String(params.limit));
             if (params?.skip !== undefined) searchParams.set('skip', String(params.skip));
             if (params?.search !== undefined) searchParams.set('search', String(params.search));
+            if (params?.language) searchParams.set('language', params.language);
             const query = searchParams.toString();
             return this.request<PaginatedResponse<ContentListItem>>(
                 `/public/categories/${slug}/content${query ? `?${query}` : ''}`

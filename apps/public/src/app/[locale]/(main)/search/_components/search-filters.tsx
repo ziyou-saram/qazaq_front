@@ -65,18 +65,18 @@ export default function SearchFilters({ categories }: SearchFiltersProps) {
                     <Input
                         type="search"
                         placeholder="Поиск по сайту..."
-                        className="pl-9 w-full rounded-full shadow-none"
+                        className="pl-9 w-full rounded-none shadow-none border-foreground focus-visible:ring-0 focus-visible:border-primary"
                         value={query}
                         onChange={onQueryChange}
                     />
                 </div>
-                <Button type="submit" className="rounded-full shadow-none">
+                <Button type="submit" className="rounded-none shadow-none font-bold uppercase tracking-widest">
                     Найти
                 </Button>
             </form>
 
             <div className="flex flex-col items-center gap-3">
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className="flex overflow-x-auto gap-2 w-full pb-2 md:justify-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                     <Button
                         variant={!selectedCategory ? "default" : "outline"}
                         size="sm"
@@ -84,7 +84,7 @@ export default function SearchFilters({ categories }: SearchFiltersProps) {
                             setSelectedCategory(null);
                             handleSearch(query, null);
                         }}
-                        className="rounded-full shadow-none"
+                        className="rounded-none shadow-none font-bold uppercase tracking-widest text-[10px] shrink-0"
                     >
                         Все
                     </Button>
@@ -94,7 +94,7 @@ export default function SearchFilters({ categories }: SearchFiltersProps) {
                             variant={selectedCategory === cat.slug ? "default" : "outline"}
                             size="sm"
                             onClick={() => toggleCategory(cat.slug)}
-                            className="rounded-full shadow-none"
+                            className="rounded-none shadow-none font-bold uppercase tracking-widest text-[10px] shrink-0"
                         >
                             {cat.name}
                         </Button>
@@ -106,7 +106,7 @@ export default function SearchFilters({ categories }: SearchFiltersProps) {
                         variant="ghost"
                         size="sm"
                         onClick={resetFilters}
-                        className="text-muted-foreground hover:text-destructive gap-1 shadow-none"
+                        className="text-muted-foreground hover:text-destructive gap-1 shadow-none rounded-none font-bold uppercase tracking-widest text-[10px]"
                     >
                         <X className="h-3 w-3" />
                         Сбросить фильтры

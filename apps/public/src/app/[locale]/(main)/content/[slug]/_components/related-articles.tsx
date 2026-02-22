@@ -16,14 +16,14 @@ import { ArticleCardSkeleton } from "@/components/ui/skeleton";
 import { api, resolveMediaUrl } from "@/lib/api";
 import type { ContentListItem, Category } from "@/lib/types";
 
-export default function RelatedArticles() {
+export default function RelatedArticles({ locale }: { locale: string }) {
     const [articles, setArticles] = useState<ContentListItem[]>([]);
     const [categories, setCategories] = useState<Map<number, string>>(new Map());
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         Promise.all([
-            api.public.getArticles({ limit: 3 }),
+            api.public.getArticles({ limit: 3, language: locale }),
             api.public.getCategories(),
         ])
             .then(([articlesData, categoriesData]) => {
@@ -33,7 +33,7 @@ export default function RelatedArticles() {
                 );
             })
             .finally(() => setLoading(false));
-    }, []);
+    }, [locale]);
 
     const getCategoryName = (categoryId?: number | null) => {
         if (!categoryId) return null;
@@ -97,7 +97,7 @@ function RelatedArticleCard({
                 </ItemContent>
                 <ItemFooter>
                     {categoryName ? `${categoryName} • ` : ""}
-                    {new Date(content.published_at || content.created_at).toLocaleDateString()}
+                    {new Date(content.published_at || content.created_at).toLocaleDateString('ru-RU')}
                 </ItemFooter>
             </Link>
         </Item>

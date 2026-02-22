@@ -2,6 +2,42 @@
   "node": {
     "0071b58e57bf8ad354c8f76d591d46c824eb6781f1": {
       "workers": {
+        "app/[locale]/(main)/about/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(main)/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        },
+        "app/[locale]/(main)/articles/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(main)/articles/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        },
+        "app/[locale]/(main)/category/[slug]/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(main)/category/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        },
+        "app/[locale]/(main)/content/[slug]/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(main)/content/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        },
+        "app/[locale]/(main)/copyright/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(main)/copyright/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        },
+        "app/[locale]/(main)/news/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(main)/news/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        },
         "app/[locale]/(main)/page": {
           "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(main)/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -16,11 +52,32 @@
         }
       },
       "layer": {
+        "app/[locale]/(main)/about/page": "action-browser",
+        "app/[locale]/(main)/articles/page": "action-browser",
+        "app/[locale]/(main)/category/[slug]/page": "action-browser",
+        "app/[locale]/(main)/content/[slug]/page": "action-browser",
+        "app/[locale]/(main)/copyright/page": "action-browser",
+        "app/[locale]/(main)/news/page": "action-browser",
         "app/[locale]/(main)/page": "action-browser",
         "app/[locale]/(main)/search/page": "action-browser"
       },
       "filename": "apps/public/src/app/actions/auth.ts",
       "exportedName": "deleteAuthCookie"
+    },
+    "4069e6b8c894c71e38539b1c8ab396e0809651d019": {
+      "workers": {
+        "app/[locale]/(auth)/login/page": {
+          "moduleId": "[project]/apps/public/.next-internal/server/app/[locale]/(auth)/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/public/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setAuthCookie",
+          "filename": "apps/public/src/app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/(auth)/login/page": "action-browser"
+      },
+      "filename": "apps/public/src/app/actions/auth.ts",
+      "exportedName": "setAuthCookie"
     }
   },
   "edge": {},

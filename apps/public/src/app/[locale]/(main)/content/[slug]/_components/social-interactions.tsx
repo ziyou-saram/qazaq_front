@@ -166,7 +166,7 @@ function CommentCard({ comment }: { comment: Comment }) {
                             {comment.user.first_name} {comment.user.last_name}
                         </span>
                         <span className="text-muted-foreground">
-                            {new Date(comment.created_at).toLocaleDateString()}
+                            {new Date(comment.created_at).toLocaleDateString('ru-RU')}
                         </span>
                     </div>
                     <p className="text-foreground/90">{comment.content}</p>

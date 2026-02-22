@@ -20,30 +20,40 @@ export function GridCard({ content, categoryName }: GridCardProps) {
     const imageUrl = resolveMediaUrl(content.cover_image_url);
 
     return (
-        <Item className="h-fit" asChild>
-            <Link href={`/content/${content.slug}`}>
-                {imageUrl && (
-                    <ItemHeader>
-                        <Image
-                            src={imageUrl}
-                            alt={content.title}
-                            width={1920}
-                            height={1080}
-                            className="aspect-square w-full rounded-sm object-cover"
-                        />
-                    </ItemHeader>
+        <Link
+            href={`/content/${content.slug}`}
+            className="group flex flex-col h-fit outline-none focus-visible:ring-2 focus-visible:ring-ring border-b border-border pb-5 hover:border-foreground transition-colors"
+        >
+            {imageUrl && (
+                <div className="mb-3 w-full overflow-hidden shrink-0">
+                    <Image
+                        src={imageUrl}
+                        alt={content.title}
+                        width={800}
+                        height={600}
+                        className="aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    />
+                </div>
+            )}
+
+            <div className="flex flex-col gap-1.5 items-start">
+                {categoryName && (
+                    <span className="text-[11px] font-bold uppercase tracking-widest text-primary">
+                        {categoryName}
+                    </span>
                 )}
-                <ItemContent>
-                    <ItemTitle className="text-foreground font-medium text-lg md:text-xl lg:text-2xl flex items-center gap-2">
-                        {content.is_pinned && <Pin className="h-4 w-4 md:h-5 md:w-5 text-primary rotate-45 shrink-0" />}
-                        {content.title}
-                    </ItemTitle>
-                </ItemContent>
-                <ItemFooter>
-                    {categoryName ? `${categoryName} • ` : ""}
-                    {new Date(content.published_at || content.created_at).toLocaleDateString()}
-                </ItemFooter>
-            </Link>
-        </Item>
+
+                <h3 className="text-foreground font-serif font-bold text-[1.35rem] leading-[1.15] md:text-2xl md:leading-[1.15] group-hover:opacity-80 transition-opacity">
+                    {content.is_pinned && (
+                        <Pin className="inline-block relative -top-[2px] mr-1.5 h-4 w-4 md:h-5 md:w-5 text-primary rotate-45 shrink-0" />
+                    )}
+                    <span className="inline">{content.title}</span>
+                </h3>
+            </div>
+
+            <div className="mt-4 text-[11px] text-muted-foreground uppercase tracking-widest font-semibold shrink-0">
+                {new Date(content.published_at || content.created_at).toLocaleDateString('ru-RU')}
+            </div>
+        </Link>
     );
 }

@@ -23,7 +23,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
     const t = await getTranslations({ locale, namespace: 'news' });
 
     const [data, categories] = await Promise.all([
-        api.public.getNews({ limit: PAGE_SIZE, skip: 0 }),
+        api.public.getNews({ limit: PAGE_SIZE, skip: 0, language: locale }),
         api.public.getCategories(),
     ]);
 
@@ -35,6 +35,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
                 title={t('all_news')}
                 type="news"
                 categories={categories.items}
+                locale={locale}
             />
         </Suspense>
     );

@@ -25,7 +25,7 @@ export function SearchBar({ className }: { className?: string }) {
             <Input
                 type="search"
                 placeholder={t('placeholder')}
-                className="pl-8 w-full rounded-full"
+                className="pl-8 w-full rounded-none"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />

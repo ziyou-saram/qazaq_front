@@ -37,7 +37,7 @@ async function SearchResults({ query, categoryId, locale }: { query?: string; ca
     const tCommon = await getTranslations({ locale, namespace: 'common' });
 
     try {
-        const results = await api.public.search({ q: query, category_id: categoryId, limit: 20 });
+        const results = await api.public.search({ q: query, category_id: categoryId, limit: 20, language: locale });
 
         if (results.items.length === 0) {
             return (
@@ -79,7 +79,7 @@ export default async function SearchPage({ searchParams, params }: SearchPagePro
     // Fetch categories for the filter component
     let categoriesList: Category[] = [];
     try {
-        const categoriesRes = await api.public.getCategories();
+        const categoriesRes = await api.public.getCategories({ has_content: true });
         categoriesList = categoriesRes.items;
     } catch (e) {
         console.error("Failed to fetch categories", e);

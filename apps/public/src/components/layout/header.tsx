@@ -77,23 +77,23 @@ export default function Header({ user: initialUser }: { user?: UserResponse | nu
     };
 
     return (
-        <header className="w-full bg-background border-b border-primary/40 pb-2">
+        <header className="w-full bg-background border-t-4 border-t-primary border-b border-border pb-0">
             <div className="flex items-center-safe justify-between py-4 container mx-auto px-4">
                 <div className="flex items-center gap-8">
                     <Link href="/">
                         <Image src={"/logo.png"} alt="Logo" width={120} height={40} className="object-contain" />
                     </Link>
 
-                    <nav className="hidden lg:flex gap-6">
-                        <Link href={"/"} className="text-muted-foreground hover:text-primary transition-colors duration-200">{t('home')}</Link>
-                        <Link href={"/news"} className="text-muted-foreground hover:text-primary transition-colors duration-200">{t('news')}</Link>
-                        <Link href={"/articles"} className="text-muted-foreground hover:text-primary transition-colors duration-200">{t('articles')}</Link>
+                    <nav className="hidden lg:flex gap-6 items-center">
+                        <Link href={"/"} className="uppercase tracking-widest text-[11px] font-bold text-foreground/80 hover:text-primary transition-colors duration-200">{t('home')}</Link>
+                        <Link href={"/news"} className="uppercase tracking-widest text-[11px] font-bold text-foreground/80 hover:text-primary transition-colors duration-200">{t('news')}</Link>
+                        <Link href={"/articles"} className="uppercase tracking-widest text-[11px] font-bold text-foreground/80 hover:text-primary transition-colors duration-200">{t('articles')}</Link>
 
                         {categories.slice(0, 5).map(cat => (
                             <Link
                                 key={cat.id}
                                 href={`/category/${cat.slug}`}
-                                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-nowrap"
+                                className="uppercase tracking-widest text-[11px] font-bold text-foreground/80 hover:text-primary transition-colors duration-200 text-nowrap"
                             >
                                 {tCats.has(cat.slug) ? tCats(cat.slug) : cat.name}
                             </Link>
@@ -108,7 +108,7 @@ export default function Header({ user: initialUser }: { user?: UserResponse | nu
                         <SearchBar />
                     </div> */}
                     <Link href={"/search"}>
-                        <Button variant={'secondary'} className="rounded-full" size={'icon'}>
+                        <Button variant={'ghost'} className="rounded-none" size={'icon'}>
                             <Search className="w-5 h-5" />
                         </Button>
                     </Link>
@@ -138,7 +138,7 @@ export default function Header({ user: initialUser }: { user?: UserResponse | nu
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         ) : (
-                            <Button variant={'secondary'} size={'lg'} className="rounded-full" asChild>
+                            <Button variant={'secondary'} size={'sm'} className="rounded-none font-bold uppercase tracking-wider text-[11px]" asChild>
                                 <Link href={"/login"}>{tAuth('login')}</Link>
                             </Button>
                         )}
@@ -184,12 +184,12 @@ export default function Header({ user: initialUser }: { user?: UserResponse | nu
                                                     <span className="text-sm font-medium">{fullName}</span>
                                                 </div>
                                             </div>
-                                            <Button variant={'secondary'} size={'lg'} className="rounded-full w-full" onClick={handleLogout}>
+                                            <Button variant={'secondary'} size={'lg'} className="rounded-none w-full font-bold uppercase tracking-wider" onClick={handleLogout}>
                                                 {tAuth('logout')}
                                             </Button>
                                         </div>
                                     ) : (
-                                        <Button variant={'secondary'} size={'lg'} className="rounded-full w-full" asChild>
+                                        <Button variant={'secondary'} size={'lg'} className="rounded-none w-full font-bold uppercase tracking-wider" asChild>
                                             <Link href={"/login"}>{tAuth('login')}</Link>
                                         </Button>
                                     )}

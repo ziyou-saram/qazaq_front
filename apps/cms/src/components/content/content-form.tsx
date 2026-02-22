@@ -35,6 +35,7 @@ const contentSchema = z.object({
     excerpt: z.string().optional(),
     content: z.string().min(10, "Содержимое должно быть не менее 10 символов"),
     type: z.enum(["news", "article"]),
+    language: z.enum(["ru", "kk", "en"]),
     // Simplification: allow any string, empty is valid. URL validation can be strict if needed but this fixes union type issues.
     cover_image_url: z.string().optional(),
     category_id: z.coerce.number().optional(),
@@ -76,6 +77,7 @@ export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохра
             title: "",
             excerpt: "",
             content: "",
+            language: "ru" as const,
             type: "article" as const,
             cover_image_url: "",
             category_id: undefined,
@@ -122,6 +124,29 @@ export function ContentForm({ defaultValues, onSubmit, submitLabel = "Сохра
                                     <SelectContent>
                                         <SelectItem value="article">Статья</SelectItem>
                                         <SelectItem value="news">Новость</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="language"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Язык контента</FormLabel>
+                                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                    <FormControl>
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Выберите язык" />
+                                        </SelectTrigger>
+                                    </FormControl>
+                                    <SelectContent>
+                                        <SelectItem value="ru">Русский (Ru)</SelectItem>
+                                        <SelectItem value="kk">Қазақша (Kk)</SelectItem>
+                                        <SelectItem value="en">English (En)</SelectItem>
                                     </SelectContent>
                                 </Select>
                                 <FormMessage />

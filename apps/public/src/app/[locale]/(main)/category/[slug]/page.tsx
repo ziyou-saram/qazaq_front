@@ -35,12 +35,12 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 import { GridCard } from "@/components/cards/grid-card";
 
-async function CategoryContent({ slug, page, categoryName }: { slug: string; page: number; categoryName: string }) {
+async function CategoryContent({ slug, page, categoryName, locale }: { slug: string; page: number; categoryName: string; locale: string }) {
     try {
         const limit = 12;
         const skip = (page - 1) * limit;
 
-        const results = await api.public.getContentByCategory(slug, { skip, limit });
+        const results = await api.public.getContentByCategory(slug, { skip, limit, language: locale });
 
         if (results.items.length === 0) {
             return (
@@ -73,6 +73,7 @@ async function CategoryContent({ slug, page, categoryName }: { slug: string; pag
 
 export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
     const { slug } = await params;
+    const { locale } = await params as any;
     const { page } = await searchParams || {};
     const currentPage = Number(page) || 1;
 
@@ -89,7 +90,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                 {categoryName}
             </h1>
             <Suspense fallback={<div className="text-center py-12">Загрузка...</div>}>
-                <CategoryContent slug={slug} page={currentPage} categoryName={categoryName} />
+                <CategoryContent slug={slug} page={currentPage} categoryName={categoryName} locale={locale} />
             </Suspense>
         </div>
     );

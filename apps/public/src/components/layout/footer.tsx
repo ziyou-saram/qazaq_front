@@ -39,18 +39,18 @@ export default function Footer() {
     // We will assume these are the main ones and translate their display names.
 
     return (
-        <footer className="w-full bg-background border-t border-border/40 pt-16 pb-8">
+        <footer className="w-full bg-background border-t-[6px] border-t-foreground pt-16 pb-8">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-24">
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-semibold text-sm text-foreground/80">{t('sections')}</h4>
+                        <h4 className="font-bold uppercase tracking-widest text-[11px] text-foreground">{t('sections')}</h4>
                         <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{tNav('home')}</Link>
                         <Link href="/news" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{tNav('news')}</Link>
                         <Link href="/articles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{tNav('articles')}</Link>
                     </div>
 
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-semibold text-sm text-foreground/80">{t('categories')}</h4>
+                        <h4 className="font-bold uppercase tracking-widest text-[11px] text-foreground">{t('categories')}</h4>
                         <Link href="/category/it" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{tCats('it')}</Link>
                         <Link href="/category/politics" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{tCats('politics')}</Link>
                         <Link href="/category/sport" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{tCats('sport')}</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-semibold text-sm text-foreground/80">{t('about')}</h4>
+                        <h4 className="font-bold uppercase tracking-widest text-[11px] text-foreground">{t('about')}</h4>
                         <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('about_project')}</Link>
                         <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('contacts')}</Link>
                         <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('privacy')}</Link>
@@ -67,7 +67,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-semibold text-sm text-foreground/80">{t('socials')}</h4>
+                        <h4 className="font-bold uppercase tracking-widest text-[11px] text-foreground">{t('socials')}</h4>
                         <a href="#" target="_blank" className="text-sm text-muted-foreground hover:text-foreground transition-colors">WhatsApp</a>
                         <a href="#" target="_blank" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Facebook</a>
                         <a href="#" target="_blank" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Instagram</a>

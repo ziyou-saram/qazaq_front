@@ -22,7 +22,7 @@ export default async function ArticlesPage({ params }: { params: Promise<{ local
     const t = await getTranslations({ locale, namespace: 'articles' });
 
     const [data, categories] = await Promise.all([
-        api.public.getArticles({ limit: PAGE_SIZE, skip: 0 }),
+        api.public.getArticles({ limit: PAGE_SIZE, skip: 0, language: locale }),
         api.public.getCategories(),
     ]);
 
@@ -34,6 +34,7 @@ export default async function ArticlesPage({ params }: { params: Promise<{ local
                 title={t('all_articles')}
                 type="article"
                 categories={categories.items}
+                locale={locale}
             />
         </Suspense>
     );
