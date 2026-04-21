@@ -1,19 +1,29 @@
-[00:00:00.662] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.729] Server  LOG     ✓ Ready in 557ms
-[00:00:05.146] Server  ERROR   API Error [/auth/me]: Error: Could not validate credentials
-[00:00:05.467] Browser WARN    Image with src "http://localhost:3000/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:11.901] Server  ERROR   API Error [/auth/me]: Error: Could not validate credentials
-[00:00:13.481] Server  ERROR   API Error [/auth/me]: Error: Could not validate credentials
-[00:01:28.022] Browser WARN    Image with src "http://localhost:3000/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:01:37.084] Browser WARN    Image with src "http://localhost:3000/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:03:47.717] Browser WARN    Image with src "http://localhost:3000/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:04:05.171] Browser WARN    Image with src "http://localhost:3000/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:06:16.076] Browser WARN    Image with src "http://localhost:3000/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:08:37.745] Server  LOG     ✓ Compiled in 41ms
-[00:08:39.800] Server  LOG     ✓ Compiled in 31ms
-[00:09:48.809] Server  LOG     ✓ Compiled in 28ms
-[00:09:50.884] Server  LOG     ✓ Compiled in 41ms
-[00:09:52.886] Server  LOG     ✓ Compiled in 22ms
-[00:13:54.914] Server  LOG     ✓ Compiled in 23ms
-[00:13:56.912] Server  LOG     ✓ Compiled in 24ms
-[00:13:58.943] Server  LOG     ✓ Compiled in 31ms
+[00:00:01.248] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.313] Server  LOG     ✓ Ready in 1104ms
+[00:00:02.447] Server  ERROR   ⨯ TypeError: fetch failed
+[00:00:02.448] Server  ERROR   ⨯ TypeError: fetch failed
+[00:00:02.642] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.798] Browser ERROR   uncaughtError: TypeError: fetch failed
+[00:00:02.798] Browser ERROR   {}
+[00:08:10.548] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:10.548] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:10.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:10.814] Browser ERROR   uncaughtError: TypeError: fetch failed
+[00:08:10.814] Browser ERROR   {}
+[00:08:12.239] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:12.239] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:12.363] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:12.494] Browser ERROR   uncaughtError: TypeError: fetch failed
+[00:08:12.494] Browser ERROR   {}
+[00:08:12.971] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:12.972] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:13.066] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:13.198] Browser ERROR   uncaughtError: TypeError: fetch failed
+[00:08:13.198] Browser ERROR   {}
+[00:08:13.607] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:13.607] Server  ERROR   ⨯ TypeError: fetch failed
+[00:08:13.698] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:13.826] Browser ERROR   uncaughtError: TypeError: fetch failed
+[00:08:13.826] Browser ERROR   {}
+[00:10:55.510] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:55.641] Browser WARN    Image with src "http://localhost:3000/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
