@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "sonner";
-import { ContentForm } from "@/components/content/content-form";
+import { ContentForm, ContentFormValues } from "@/components/content/content-form";
 import { createArticle } from "@/actions/articles";
 
 interface CreateContentClientProps {
@@ -9,7 +9,7 @@ interface CreateContentClientProps {
 }
 
 export default function CreateContentClient({ accessToken }: CreateContentClientProps) {
-    const handleSubmit = async (values: any) => {
+    const handleSubmit = async (values: ContentFormValues) => {
         const result = await createArticle(values);
         if (result?.error) {
             toast.error(result.error);

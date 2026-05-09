@@ -10,7 +10,6 @@ import { Category } from "@/lib/types";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -46,7 +45,7 @@ export type ContentFormValues = z.infer<typeof contentSchema>;
 
 interface ContentFormProps {
     defaultValues?: Partial<ContentFormValues>;
-    onSubmit: (values: ContentFormValues) => Promise<any>;
+    onSubmit: (values: ContentFormValues) => Promise<unknown>;
     submitLabel?: string;
     accessToken?: string;
 }

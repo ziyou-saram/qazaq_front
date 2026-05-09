@@ -53,6 +53,7 @@ export interface UserResponse {
 
 export type ContentType = 'news' | 'article';
 export type ContentStatus = 'draft' | 'in_review' | 'needs_revision' | 'approved' | 'published';
+export type ContentLanguage = 'ru' | 'kk' | 'en';
 
 export interface ContentListItem {
     id: number;
@@ -61,6 +62,7 @@ export interface ContentListItem {
     excerpt?: string | null;
     type: ContentType;
     status: ContentStatus;
+    language: ContentLanguage;
     is_pinned: boolean;
     cover_image_url?: string | null;
     category_id?: number | null;
@@ -76,6 +78,26 @@ export interface ContentListItem {
 export interface Content extends ContentListItem {
     content: string;
     author_id: number;
+}
+
+export interface ContentCreate {
+    title: string;
+    content: string;
+    excerpt?: string | null;
+    type: ContentType;
+    language: ContentLanguage;
+    category_id?: number | null;
+    cover_image_url?: string | null;
+}
+
+export interface ContentUpdate {
+    title?: string;
+    content?: string;
+    excerpt?: string | null;
+    language?: ContentLanguage;
+    category_id?: number | null;
+    cover_image_url?: string | null;
+    is_pinned?: boolean;
 }
 
 export interface Comment {
